@@ -1,7 +1,14 @@
 {
-  "name": "",
+  "name": "sakura-website",
+  "description": "Website for Sakura Preschool",
+  "author": {
+    "name": "kakashiorion",
+    "email": "nitin.kool.1808@gmail.com",
+    "url": "https://github.com/kakashiorion"
+  },
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "private":"true",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
