@@ -1,0 +1,60 @@
+---
+import HeaderTickerItem from "./HeaderTickerItem.astro"
+import Whatsapp from "../assets/whatsapp.svg"
+import Email from "../assets/email.svg"
+import Location from "../assets/location.svg"
+import Facebook from "../assets/facebook.svg"
+import Instagram from "../assets/instagram.svg"
+import YouTube from "../assets/youtube.svg"
+import {
+  FacebookLink,
+  InstagramLink,
+  SchoolGoogleLocationLink,
+  YouTubeLink,
+} from "../utils/commonConstants"
+---
+
+<div
+  id="HeaderTickerBar"
+  class="hidden md:flex md:justify-center w-full md:items-center md:py-2 lg:py-2.5 md:px-8 lg:px-12 bg-blue-200"
+>
+  <div
+    id="Ticker_Content"
+    class="flex flex-row md:gap-3 lg:gap-4 items-center justify-between w-full lg:max-w-7xl"
+  >
+    <div
+      id="Ticker_Items"
+      class="flex flex-row items-center justify-start md:gap-3 lg:gap-4"
+    >
+      <HeaderTickerItem
+        text="Baganshali, Kokrajhar, 783370"
+        icon={Location}
+        href={SchoolGoogleLocationLink}
+      />
+      <HeaderTickerItem
+        text="8447695298"
+        icon={Whatsapp}
+        href="tel:8447695298"
+      />
+      <HeaderTickerItem
+        text="sakurapreschool.kok@gmail.com"
+        icon={Email}
+        href="mailto:sakurapreschool.kok@gmail.com"
+      />
+    </div>
+    <div
+      id="Ticker_SM"
+      class="flex flex-row items-center justify-end md:gap-2 lg:gap-3"
+    >
+      <a href={FacebookLink}>
+        <Facebook class="md:size-4 lg:size-5 fill-blue-900" />
+      </a>
+      <a href={InstagramLink}>
+        <Instagram class="md:size-4 lg:size-5 fill-blue-900" />
+      </a>
+      <a href={YouTubeLink}>
+        <YouTube class="md:size-4 lg:size-5 fill-blue-900" />
+      </a>
+    </div>
+  </div>
+</div>

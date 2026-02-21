@@ -1,0 +1,31 @@
+---
+import type { LinkListItemType } from "../utils/commonTypes"
+
+interface Props {
+  title: string
+  items: LinkListItemType[]
+}
+const { title, items } = Astro.props
+---
+
+<div class="flex flex-col gap-1 md:gap-1.5 lg:gap-2">
+  <span class="text-base
+  md:text-base
+  lg:text-lg
+  font-bold
+  text-pink-700">
+    {title}
+  </span>
+  {
+    items.map((i) => {
+      return (
+        <a
+          href={i.href}
+          class="text-sm md:text-sm lg:text-base text-pink-700 hover:text-pink-800 hover:cursor-pointer hover:underline"
+        >
+          {i.text}
+        </a>
+      )
+    })
+  }
+</div>

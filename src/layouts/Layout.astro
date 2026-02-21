@@ -1,23 +1,50 @@
-<!doctype html>
+---
+import "../styles/global.css"
+import Footer from "../components/Footer.astro"
+import MenuBar from "../components/MenuBar.astro"
+import HeaderTickerBar from "../components/HeaderTickerBar.astro"
+import SiteInfoBar from "../components/SiteInfoBar.astro"
+import type { SitePagesType } from "../utils/commonTypes"
+import { Font } from "astro:assets"
+
+interface Props {
+  title: string
+  description: string
+  currentTab: SitePagesType
+  ogTitle?: string
+  ogDesc?: string
+  keywords?: string
+}
+const { title, description, currentTab, ogTitle, ogDesc, keywords } =
+  Astro.props
+---
+
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Sakura Preschool" />
+    <meta name="keywords" content={keywords} />
+    <meta name="description" content={description} />
+    <meta name="og:title" property="og:title" content={ogTitle} />
+    <meta name="og:description" property="og:description" content={ogDesc} />
+    <meta name="robots" content="index, follow" />
+    <title>{title}</title>
+    <Font cssVariable="--font-noto-sans" preload />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body>
+    <HeaderTickerBar />
+    <MenuBar selectedTab={currentTab} />
+    <slot />
+    <Footer />
+    <SiteInfoBar />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  body {
+    font-family: var(--font-noto-sans);
+  }
 </style>

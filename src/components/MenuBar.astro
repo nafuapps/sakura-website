@@ -1,0 +1,110 @@
+---
+import NavItem from "./NavItem.astro"
+import EnrollButton from "./EnrollButton.astro"
+import Logo from "../assets/logo.svg"
+import Open from "../assets/menu.svg"
+import Close from "../assets/close.svg"
+import type { SitePagesType } from "../utils/commonTypes"
+
+interface Props {
+  selectedTab: SitePagesType
+}
+
+const { selectedTab = "home" } = Astro.props
+---
+
+<div
+  id="Menu"
+  class="flex fixed z-10 top-0 md:top-6 justify-center w-full items-center md:px-8 lg:px-12 md:py-4 lg:py-5"
+>
+  <div
+    id="Menu_Content"
+    class="flex flex-row w-full items-center justify-between gap-1.5 md:gap-2 lg:gap-3 bg-white md:rounded-full md:max-w-5xl lg:max-w-7xl py-2 md:py-2.5 lg:py-3 px-4 md:px-5 lg:px-6 shadow opacity-95"
+  >
+    <a href="/" id="Menu_Logo">
+      <Logo class="h-7 md:h-8 lg:h-10 w-auto hover:cursor-pointer" />
+    </a>
+    <div
+      class="flex flex-row-reverse md:flex-row gap-2 md:gap-2 lg:gap-3 items-center justify-end"
+    >
+      <a id="Menu_Open" class="flex md:hidden"
+        ><Open class="h-7 w-auto hover:cursor-pointer" /></a
+      >
+      <a id="Menu_Close" class="hidden md:hidden"
+        ><Close class="h-7 w-auto hover:cursor-pointer" /></a
+      >
+      <nav
+        id={"Menu_NavLinks"}
+        class="hidden md:flex flex-col md:flex-row fixed md:relative top-12 right-6 md:top-0 md:right-0 bg-white rounded-lg px-3 py-2 md:p-0 items-start md:items-center justify-center gap-1.5 md:gap-1 lg:gap-1.5"
+      >
+        <NavItem href="/" selected={selectedTab == "home"} title="Home" />
+        <NavItem
+          href="/admission"
+          selected={selectedTab == "admission"}
+          title="Admission"
+        />
+        <NavItem
+          href="/curriculum"
+          selected={selectedTab == "curriculum"}
+          title="Curriculum"
+        />
+        <NavItem
+          href="/career"
+          selected={selectedTab == "career"}
+          title="Career"
+        />
+        <NavItem
+          href="/blogs"
+          selected={selectedTab == "blogs"}
+          title="Blogs"
+        />
+        <NavItem
+          href="/about"
+          selected={selectedTab == "about"}
+          title="About Us"
+        />
+      </nav>
+      <!-- Language selector -->
+      <EnrollButton />
+    </div>
+  </div>
+</div>
+
+<script>
+  const navLinks = document.querySelector("nav#Menu_NavLinks")
+  const openButton = document.querySelector("a#Menu_Open")
+  const closeButton = document.querySelector("a#Menu_Close")
+
+  function openMenu() {
+    openButton?.classList.add("hidden")
+    openButton?.classList.remove("flex")
+    closeButton?.classList.add("flex")
+    closeButton?.classList.remove("hidden")
+    navLinks?.classList.add("flex")
+    navLinks?.classList.remove("hidden")
+  }
+
+  function closeMenu() {
+    openButton?.classList.remove("hidden")
+    openButton?.classList.add("flex")
+    closeButton?.classList.remove("flex")
+    closeButton?.classList.add("hidden")
+    navLinks?.classList.add("hidden")
+    navLinks?.classList.remove("flex")
+  }
+
+  openButton?.addEventListener("click", () => {
+    openMenu()
+  })
+  closeButton?.addEventListener("click", () => {
+    closeMenu()
+  })
+  document.addEventListener("click", (event) => {
+    if (
+      !navLinks?.contains(event.target as Node) &&
+      !openButton?.contains(event.target as Node)
+    ) {
+      if (closeButton?.classList.contains("flex")) closeMenu()
+    }
+  })
+</script>

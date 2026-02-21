@@ -1,0 +1,14 @@
+---
+interface Props {
+  selected: boolean
+  title: string
+  href: string
+}
+const { selected, title, href } = Astro.props
+---
+
+<a
+  href={href}
+  class={`${selected ? "text-pink-50 bg-pink-300" : "text-pink-300 hover:bg-pink-50"} rounded-full text-nowrap text-sm md:text-sm lg:text-base font-bold hover:cursor-pointer px-2 md:px-2.5 lg:px-3 py-1 md:py-1.5 lg:py-2`}
+  >{title}</a
+>

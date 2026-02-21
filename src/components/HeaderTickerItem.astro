@@ -1,0 +1,19 @@
+---
+import type { SvgComponent } from "astro/types"
+
+interface Props {
+  icon: SvgComponent & ImageMetadata
+  text: string
+  href: string
+}
+
+const { icon: Icon, text, href } = Astro.props
+---
+
+<a
+  href={href}
+  class="hidden md:flex md:flex-row md:gap-1 lg:gap-1.5 md:items-center"
+>
+  <Icon class="md:size-4 lg:size-5 fill-blue-900" />
+  <span class="md:text-tiny lg:text-xs text-blue-900">{text}</span>
+</a>
