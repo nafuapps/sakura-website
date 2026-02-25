@@ -21,7 +21,7 @@ export default defineConfig({
     fonts: [
       {
         provider: fontProviders.google(),
-        name: "Noto_Sans",
+        name: "Noto Sans",
         cssVariable: "--font-noto-sans",
       },
     ],

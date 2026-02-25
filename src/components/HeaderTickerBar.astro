@@ -9,9 +9,15 @@ import YouTube from "../assets/youtube.svg"
 import {
   FacebookLink,
   InstagramLink,
+  SchoolEmailLink,
   SchoolGoogleLocationLink,
+  SchoolPhoneLink,
   YouTubeLink,
 } from "../utils/commonConstants"
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <div
@@ -27,19 +33,19 @@ import {
       class="flex flex-row items-center justify-start md:gap-3 lg:gap-4"
     >
       <HeaderTickerItem
-        text="Baganshali, Kokrajhar, 783370"
+        text={t("HeaderTicker.Location")}
         icon={Location}
         href={SchoolGoogleLocationLink}
       />
       <HeaderTickerItem
-        text="8447695298"
+        text={t("HeaderTicker.Phone")}
         icon={Whatsapp}
-        href="tel:8447695298"
+        href={SchoolPhoneLink}
       />
       <HeaderTickerItem
-        text="sakurapreschool.kok@gmail.com"
+        text={t("HeaderTicker.Email")}
         icon={Email}
-        href="mailto:sakurapreschool.kok@gmail.com"
+        href={SchoolEmailLink}
       />
     </div>
     <div

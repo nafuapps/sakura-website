@@ -1,0 +1,42 @@
+---
+import { languages } from "../i18n/ui"
+import { getLangFromUrl } from "../i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const path = Astro.url.pathname
+---
+
+<select
+  id="languageButton"
+  data-path={path}
+  data-lang={lang}
+  class="border border-pink-300 rounded-sm text-pink-300 text-xs md:text-xs lg:text-sm px-2 md:px-2.5 lg:px-3 py-1 md:py-1.5 lg:py-2"
+>
+  {
+    Object.entries(languages).map(([l, label]) => {
+      return (
+        <option class="bg-white opacity-95" value={l} selected={l === lang}>
+          {label}
+        </option>
+      )
+    })
+  }
+</select>
+
+<script>
+  import { languages } from "../i18n/ui"
+  import { changePathLanguage } from "../i18n/utils"
+
+  const select = document.getElementById("languageButton")
+  const path = select?.dataset.path
+  const lang = select?.dataset.lang as keyof typeof languages
+  console.log({ path })
+  console.log({ lang })
+
+  select?.addEventListener("change", (e) => {
+    const newLang = (e.target as HTMLSelectElement)
+      .value as keyof typeof languages
+    const newPath = changePathLanguage(lang, newLang, path!)
+    window.location.pathname = newPath
+  })
+</script>

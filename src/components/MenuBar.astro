@@ -5,11 +5,15 @@ import Logo from "../assets/logo.svg"
 import Open from "../assets/menu.svg"
 import Close from "../assets/close.svg"
 import type { SitePagesType } from "../utils/commonTypes"
+import LanguageButton from "./LanguageButton.astro"
+import { useTranslatedPath } from "../i18n/utils"
+import { getLangFromUrl } from "../i18n/utils"
 
 interface Props {
   selectedTab: SitePagesType
 }
-
+const lang = getLangFromUrl(Astro.url)
+const translatePath = useTranslatedPath(lang)
 const { selectedTab = "home" } = Astro.props
 ---
 
@@ -21,7 +25,7 @@ const { selectedTab = "home" } = Astro.props
     id="Menu_Content"
     class="flex flex-row w-full items-center justify-between gap-1.5 md:gap-2 lg:gap-3 bg-white md:rounded-full md:max-w-5xl lg:max-w-7xl py-2 md:py-2.5 lg:py-3 px-4 md:px-5 lg:px-6 shadow opacity-95"
   >
-    <a href="/" id="Menu_Logo">
+    <a href={translatePath("/")} id="Menu_Logo">
       <Logo class="h-7 md:h-8 lg:h-10 w-auto hover:cursor-pointer" />
     </a>
     <div
@@ -37,34 +41,38 @@ const { selectedTab = "home" } = Astro.props
         id={"Menu_NavLinks"}
         class="hidden md:flex flex-col md:flex-row fixed md:relative top-12 right-6 md:top-0 md:right-0 bg-white rounded-lg px-3 py-2 md:p-0 items-start md:items-center justify-center gap-1.5 md:gap-1 lg:gap-1.5"
       >
-        <NavItem href="/" selected={selectedTab == "home"} title="Home" />
         <NavItem
-          href="/admission"
+          href={translatePath("/")}
+          selected={selectedTab == "home"}
+          title="Home"
+        />
+        <NavItem
+          href={translatePath("/admission")}
           selected={selectedTab == "admission"}
           title="Admission"
         />
         <NavItem
-          href="/curriculum"
+          href={translatePath("/curriculum")}
           selected={selectedTab == "curriculum"}
           title="Curriculum"
         />
         <NavItem
-          href="/career"
+          href={translatePath("/career")}
           selected={selectedTab == "career"}
           title="Career"
         />
         <NavItem
-          href="/blogs"
+          href={translatePath("/blogs")}
           selected={selectedTab == "blogs"}
           title="Blogs"
         />
         <NavItem
-          href="/about"
+          href={translatePath("/about")}
           selected={selectedTab == "about"}
           title="About Us"
         />
       </nav>
-      <!-- Language selector -->
+      <LanguageButton />
       <EnrollButton />
     </div>
   </div>

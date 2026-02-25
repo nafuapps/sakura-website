@@ -7,17 +7,28 @@ import {
 } from "../utils/commonConstants"
 import type { LinkListItemType } from "../utils/commonTypes"
 import FooterList from "./FooterList.astro"
+
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
+
 const siteLinkList: LinkListItemType[] = [
-  { text: "Admission", href: "/admission" },
-  { text: "Curriculum", href: "/curriculum" },
-  { text: "Blogs", href: "/blogs" },
-  { text: "About", href: "/about" },
-  { text: "Join Us", href: "/career" },
+  { text: t("Admission"), href: translatePath("/admission") },
+  { text: t("Curriculum"), href: translatePath("/curriculum") },
+  { text: t("Blogs"), href: translatePath("/blogs") },
+  { text: t("About"), href: translatePath("/about") },
+  { text: t("JoinUs"), href: translatePath("/career") },
 ]
 const socialLinkList: LinkListItemType[] = [
-  { text: "YouTube", href: YouTubeLink },
-  { text: "Instagram", href: InstagramLink },
-  { text: "Facebook", href: FacebookLink },
+  { text: t("YouTube"), href: YouTubeLink },
+  { text: t("Instagram"), href: InstagramLink },
+  { text: t("Facebook"), href: FacebookLink },
 ]
 ---
 

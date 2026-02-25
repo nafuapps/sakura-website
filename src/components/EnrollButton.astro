@@ -1,9 +1,17 @@
 ---
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils"
 
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
 ---
 
 <a
-  href="/admission"
-  class="flex flex-row text-nowrap items-center justify-center bg-pink-700 hover:bg-pink-800 hover:cursor-pointer text-pink-50 font-bold text-xs md:text-xs lg:text-sm rounded-full py-1.5 md:py-2 lg:py-2.5 px-4 md:px-5 lg:px-6"
-  >Enroll Now</a
+  href={translatePath("/admission")}
+  class="flex flex-row text-nowrap items-center justify-center bg-pink-300 hover:bg-pink-500 hover:cursor-pointer text-pink-50 font-bold text-xs md:text-xs lg:text-sm rounded-full py-1.5 md:py-2 lg:py-2.5 px-4 md:px-5 lg:px-6"
+  >{t("EnrollButton")}</a
 >

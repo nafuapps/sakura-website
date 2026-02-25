@@ -6,6 +6,7 @@ import HeaderTickerBar from "../components/HeaderTickerBar.astro"
 import SiteInfoBar from "../components/SiteInfoBar.astro"
 import type { SitePagesType } from "../utils/commonTypes"
 import { Font } from "astro:assets"
+import { getLangFromUrl } from "../i18n/utils"
 
 interface Props {
   title: string
@@ -15,11 +16,12 @@ interface Props {
   ogDesc?: string
   keywords?: string
 }
+const lang = getLangFromUrl(Astro.url)
 const { title, description, currentTab, ogTitle, ogDesc, keywords } =
   Astro.props
 ---
 
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
