@@ -3,3 +3,28 @@
 @theme {
   --text-tiny: 11px;
 }
+
+/* For Firefox */
+* {
+  scrollbar-width: 8px; /* auto, thin, or none */
+  scrollbar-color: #f9a8d4 #fdf2f8; /* thumb color and track color */
+}
+
+/* For Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #fdf2f8; /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f9a8d4; /* color of the scroll thumb */
+  border-radius: 4px; /* roundness of the scroll thumb */
+  border: 2px solid #c2d2e4; /* creates padding around scroll thumb */
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -3,8 +3,9 @@ import type { LinkListItemType } from "../utils/commonTypes"
 interface Props {
   title: string
   items: LinkListItemType[]
+  newTab?: boolean
 }
-const { title, items } = Astro.props
+const { title, items, newTab } = Astro.props
 ---
 
 <div class="flex flex-col gap-1 md:gap-1.5 lg:gap-2">
@@ -20,6 +21,7 @@ const { title, items } = Astro.props
       return (
         <a
           href={i.href}
+          target={newTab ? "_blank" : "_self"}
           class="text-sm md:text-sm lg:text-base text-pink-700 hover:text-pink-800 hover:cursor-pointer hover:underline"
         >
           {i.text}
