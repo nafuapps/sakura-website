@@ -6,3 +6,7 @@ export const SchoolGoogleLocationLink =
   "https://maps.google.com/?q=Sakura+Preschool,+RNB+Road,+Baganshali,+Kokrajhar,+Assam+783370"
 export const SchoolPhoneLink = "tel:9181600286"
 export const SchoolEmailLink = "mailto:sakurapreschool.kok@gmail.com"
+
+export const AdmissionFormLink = "/admission#form"
+
+export const web3FormAccessKey = "e4981f36-a795-4326-8883-eb87017d9a9e"

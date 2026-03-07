@@ -1,5 +1,4 @@
 ---
-import NavItem from "./NavItem.astro"
 import EnrollButton from "./EnrollButton.astro"
 import Logo from "../assets/logo.svg"
 import Open from "../assets/menu.svg"
@@ -8,6 +7,7 @@ import type { SitePagesType } from "../utils/commonTypes"
 import LanguageButton from "./LanguageButton.astro"
 import { useTranslatedPath, useTranslations } from "../i18n/utils"
 import { getLangFromUrl } from "../i18n/utils"
+import NavItem from "./NavItem.astro"
 
 interface Props {
   selectedTab: SitePagesType
@@ -24,7 +24,7 @@ const { selectedTab = "home" } = Astro.props
 >
   <div
     id="Menu_Content"
-    class="flex flex-row w-full items-center justify-between gap-1.5 md:gap-2 lg:gap-3 bg-white md:rounded md:max-w-5xl lg:max-w-7xl py-1.5 md:py-2 lg:py-2.5 px-4 md:px-5 lg:px-6 shadow opacity-95"
+    class="flex flex-row w-full items-center justify-between gap-1.5 md:gap-2 lg:gap-3 bg-white md:rounded md:border-2 md:border-pink-50 md:max-w-5xl lg:max-w-7xl py-1.5 md:py-2 lg:py-2.5 px-4 md:px-5 lg:px-6 shadow opacity-98"
   >
     <a href={translatePath("/")} id="Menu_Logo">
       <Logo class="h-9 md:h-10 lg:h-11 w-auto hover:cursor-pointer" />
@@ -73,6 +73,7 @@ const { selectedTab = "home" } = Astro.props
           href={translatePath("/about")}
           selected={selectedTab == "about"}
           title={t("About")}
+          hideSmall
         />
       </nav>
       <LanguageButton />

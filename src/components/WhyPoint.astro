@@ -1,0 +1,18 @@
+---
+import type { AstroComponent } from "@lucide/astro"
+
+interface Props {
+  icon: AstroComponent
+  title: string
+}
+const { icon: Icon, title } = Astro.props
+---
+
+<div
+  class="flex flex-col gap-2 md:gap-2.5 lg:gap-3 items-center rounded-lg bg-green-100 p-4 md:p-5 lg:p-6"
+>
+  <Icon class="size-8 md:size-9 lg:size-10 text-pink-400" />
+  <p class="text-sm md:text-base text-pink-950 text-center">
+    {title}
+  </p>
+</div>

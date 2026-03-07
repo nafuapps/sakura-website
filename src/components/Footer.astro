@@ -1,5 +1,5 @@
 ---
-import LogoDark from "../assets/logoDark.svg"
+import LogoWhite from "../assets/logoWhite.svg"
 import {
   FacebookLink,
   InstagramLink,
@@ -34,13 +34,15 @@ const socialLinkList: LinkListItemType[] = [
 
 <div
   id="Footer"
-  class="flex justify-center w-full items-center py-4 md:py-5 lg:py-6 px-6 md:px-8 lg:px-12 bg-pink-300"
+  class="flex justify-center w-full items-center py-4 md:py-5 lg:py-6 px-6 md:px-8 lg:px-12 bg-pink-400"
 >
   <div
     id="Footer_Content"
     class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full lg:max-w-7xl"
   >
-    <LogoDark class="h-12 md:h-12 lg:h-16 w-auto col-span-2 md:col-span-1" />
+    <LogoWhite
+      class="h-12 md:h-12 lg:h-16 w-auto col-span-2 md:col-span-1 text-white"
+    />
     <FooterList title="Site Links" items={siteLinkList} />
     <FooterList title="Social Media" items={socialLinkList} newTab />
   </div>

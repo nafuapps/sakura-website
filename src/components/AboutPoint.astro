@@ -1,0 +1,27 @@
+---
+import type { AstroComponent } from "@lucide/astro"
+
+interface Props {
+  title: string
+  description: string
+  icon: AstroComponent
+  end?: boolean
+}
+const { title, description, icon: Icon, end } = Astro.props
+---
+
+<div class={`flex gap-2 md:gap-3 lg:gap-4 ${end ? "md:flex-row-reverse" : ""}`}>
+  <div
+    class="rounded-full shrink-0 size-10 md:size-11 lg:size-12 bg-pink-400 flex items-center justify-center"
+  >
+    <Icon class="size-6 md:size-7 lg:size-8 text-white" />
+  </div>
+  <div
+    class={`flex flex-col gap-1 md:gap-1.5 lg:gap-2 ${end ? "md:text-end" : ""}`}
+  >
+    <h5 class="text-sm md:text-base font-semibold text-pink-400">
+      {title}
+    </h5>
+    <p class="text-xs md:text-sm text-pink-950">{description}</p>
+  </div>
+</div>

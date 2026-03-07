@@ -13,7 +13,7 @@ const { title, items, newTab } = Astro.props
   md:text-base
   lg:text-lg
   font-bold
-  text-pink-700">
+  text-white">
     {title}
   </span>
   {
@@ -22,7 +22,7 @@ const { title, items, newTab } = Astro.props
         <a
           href={i.href}
           target={newTab ? "_blank" : "_self"}
-          class="text-sm md:text-sm lg:text-base text-pink-700 hover:text-pink-800 hover:cursor-pointer hover:underline"
+          class="text-sm md:text-sm lg:text-base text-white hover:text-pink-50 hover:cursor-pointer hover:underline"
         >
           {i.text}
         </a>
