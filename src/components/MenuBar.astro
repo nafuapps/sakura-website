@@ -4,7 +4,7 @@ import Logo from "../assets/logo.svg"
 import Open from "../assets/menu.svg"
 import Close from "../assets/close.svg"
 import type { SitePagesType } from "../utils/commonTypes"
-import LanguageButton from "./LanguageButton.astro"
+// import LanguageButton from "./LanguageButton.astro"
 import { useTranslatedPath, useTranslations } from "../i18n/utils"
 import { getLangFromUrl } from "../i18n/utils"
 import NavItem from "./NavItem.astro"
@@ -76,7 +76,7 @@ const { selectedTab = "home" } = Astro.props
           hideSmall
         />
       </nav>
-      <LanguageButton />
+      <!-- <LanguageButton /> -->
       <EnrollButton />
     </div>
   </div>
