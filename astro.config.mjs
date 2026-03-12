@@ -17,13 +17,16 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Noto Sans",
+      cssVariable: "--font-noto-sans",
+    },
+  ],
   experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "Noto Sans",
-        cssVariable: "--font-noto-sans",
-      },
-    ],
+    queuedRendering: {
+      enabled: true,
+    },
   },
 })
