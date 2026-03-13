@@ -84,13 +84,31 @@ export const ui = {
     "Admission.Process.Title": "Admission Process",
     "Admission.Process.Description":
       "Easy and straightforward enrollment process",
+    "Admission.Process.Step1.Title": "Step 1: Contact us",
+    "Admission.Process.Step1.Description":
+      "Reach out to us via phone, email, or our online enquiry form to express your interest and ask any questions you may have.",
+    "Admission.Process.Step2.Title": "Step 2: Schedule a visit",
+    "Admission.Process.Step2.Description":
+      "We encourage you to visit our preschool to experience our nurturing environment and meet our dedicated team.",
+    "Admission.Process.Step3.Title": "Step 3: Submit Application",
+    "Admission.Process.Step3.Description":
+      "Fill in and submit your application form along with the required documents.",
+    "Admission.Process.Documents.Title": "Required Documents:",
+    "Admission.Process.Documents.List1": "Birth certificate",
+    "Admission.Process.Documents.List2": "Vaccination record",
+    "Admission.Process.Documents.List3":
+      "Parent's identification (Aadhaar Card, Passport, etc.)",
+    "Admission.Process.Documents.List4": "Address proof",
+    "Admission.Process.Documents.List5": "Child's recent photograph (2)",
+    "Admission.Process.Enrollment.Title": "Enrollment for 2026-27 is now open!",
+    "Admission.Process.Enrollment.DownloadCTA": "Download Application Form",
     "Admission.Form.Title": "Enquiry Form",
     "Admission.Form.Description":
       "Get in touch for admission enquiry or any other questions to schedule a visit",
     "Admission.Form.Parent": "Parent's Name",
     "Admission.Form.Child": "Child's Name",
     "Admission.Form.Age": "Child's Age",
-    "Admission.Form.Phone": "Phone Number",
+    "Admission.Form.Phone": "Mobile Number",
     "Admission.Form.Email": "Email Address (Optional)",
     "Admission.Form.Message": "Additional Information (Optional)",
     "Admission.Form.Submit": "Submit",
@@ -99,6 +117,20 @@ export const ui = {
     "Admission.FAQ.Title": "Frequently Asked Questions",
     "Admission.FAQ.Description":
       "Find answers to common questions about our enrollment process and programs.",
+    "Admission.FAQ.Question1": "What is the age range for enrollment?",
+    "Admission.FAQ.Answer1": "We accept children aged 2.5 to 5.5 years old.",
+    "Admission.FAQ.Question2": "What documents are required for enrollment?",
+    "Admission.FAQ.Answer2":
+      "You will need to provide the child's birth certificate, vaccination record, parent's identification, and address proof.",
+    "Admission.FAQ.Question3": "What is the tuition fee for the programs?",
+    "Admission.FAQ.Answer3":
+      "Tuition fees vary depending on the program and duration. Please contact us for detailed information.",
+    "Admission.FAQ.Question4": "How can I schedule a visit to the preschool?",
+    "Admission.FAQ.Answer4":
+      "You can schedule a visit by contacting us via phone or email, or by filling out our online enquiry form.",
+    "Admission.FAQ.Question5": "What are the operating hours of the preschool?",
+    "Admission.FAQ.Answer5":
+      "Our preschool is open from 9:00 AM to 5:00 PM, Monday through Saturday.",
   },
   //Assamese
   as: {},

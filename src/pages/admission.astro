@@ -6,6 +6,7 @@ import formImage from "../assets/admissionForm.png"
 import web3Icon from "../assets/web3Icon.png"
 import { getLangFromUrl, useTranslations } from "../i18n/utils"
 import { web3FormAccessKey } from "../utils/commonConstants"
+import FAQItem from "../components/FAQItem.astro"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -13,7 +14,7 @@ const t = useTranslations(lang)
 
 <Layout
   title="Sakura Preschool - Admission"
-  description=""
+  description="Admission page for Sakura Preschool - Find all admission related details here"
   currentTab="admission"
 >
   <div
@@ -61,6 +62,86 @@ const t = useTranslations(lang)
       <p class="text-sm md:text-base text-pink-950 text-center max-w-3xl">
         {t("Admission.Process.Description")}
       </p>
+      <div
+        id="process-steps"
+        class="flex flex-col gap-4 justify-center items-center"
+      >
+        <div
+          id="step1"
+          class="flex flex-col gap-2 md:gap-2.5 lg:gap-3 border border-pink-400 py-2 px-4 rounded-md w-full lg:w-2/3"
+        >
+          <h5 class="text-base md:text-lg font-semibold text-pink-400">
+            {t("Admission.Process.Step1.Title")}
+          </h5>
+          <p class="text-xs md:text-sm text-pink-950">
+            {t("Admission.Process.Step1.Description")}
+          </p>
+        </div>
+        <div
+          id="step2"
+          class="flex flex-col gap-2 md:gap-2.5 lg:gap-3 border border-pink-400 py-2 px-4 rounded-md w-full lg:w-2/3"
+        >
+          <h5 class="text-base md:text-lg font-semibold text-pink-400">
+            {t("Admission.Process.Step2.Title")}
+          </h5>
+          <p class="text-xs md:text-sm text-pink-950">
+            {t("Admission.Process.Step2.Description")}
+          </p>
+        </div>
+        <div
+          id="step3"
+          class="flex flex-col gap-2 md:gap-2.5 lg:gap-3 border border-pink-400 py-2 px-4 rounded-md w-full lg:w-2/3"
+        >
+          <h5 class="text-base md:text-lg font-semibold text-pink-400">
+            {t("Admission.Process.Step3.Title")}
+          </h5>
+          <p class="text-xs md:text-sm text-pink-950">
+            {t("Admission.Process.Step3.Description")}
+          </p>
+        </div>
+        <div
+          id="documents"
+          class="bg-pink-50 rounded-lg w-full lg:w-2/3 py-2 px-4"
+        >
+          <h5 class="text-base md:text-lg font-semibold text-pink-400">
+            {t("Admission.Process.Documents.Title")}
+          </h5>
+          <ul
+            class="list-disc list-inside flex flex-col mt-1 lg:mt-2 gap-1.5 lg:gap-2"
+          >
+            <li class="text-xs md:text-sm text-pink-950">
+              {t("Admission.Process.Documents.List1")}
+            </li>
+            <li class="text-xs md:text-sm text-pink-950">
+              {t("Admission.Process.Documents.List2")}
+            </li>
+            <li class="text-xs md:text-sm text-pink-950">
+              {t("Admission.Process.Documents.List3")}
+            </li>
+            <li class="text-xs md:text-sm text-pink-950">
+              {t("Admission.Process.Documents.List4")}
+            </li>
+            <li class="text-xs md:text-sm text-pink-950">
+              {t("Admission.Process.Documents.List5")}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        id="enrollment-annoucement"
+        class="flex flex-col border-2 border-blue-400 items-center bg-blue-50 rounded-lg w-full lg:w-2/3 py-2 md:py-2.5 lg:py-3 px-4 md:px-4.5 lg:px-5 gap-2 md:gap-2.5 lg:gap-3"
+      >
+        <h3 class="text-lg md:text-xl font-semibold text-blue-400 text-center">
+          {t("Admission.Process.Enrollment.Title")}
+        </h3>
+        <a
+          href="/files/enrollmentForm.pdf"
+          download
+          class="bg-blue-400 cursor-pointer rounded-lg py-3 md:py-3.5 lg:py-4 px-4 md:px-4.5 lg:px-5 text-sm md:text-base text-white"
+        >
+          {t("Admission.Process.Enrollment.DownloadCTA")}
+        </a>
+      </div>
     </div>
   </div>
   <div
@@ -95,26 +176,32 @@ const t = useTranslations(lang)
         <input
           id="parentName"
           type="text"
+          required
           placeholder={t("Admission.Form.Parent")}
           class="w-full md:w-auto px-4 py-2 border focus:bg-white placeholder:text-pink-400 text-pink-950 border-pink-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent"
         />
         <input
           id="childName"
           type="text"
+          required
           placeholder={t("Admission.Form.Child")}
           class="w-full md:w-auto px-4 py-2 border focus:bg-white placeholder:text-pink-400 text-pink-950 border-pink-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent"
         />
         <input
           id="age"
           type="tel"
-          min="0"
+          min="1"
           max="10"
+          required
           placeholder={t("Admission.Form.Age")}
           class="w-full md:w-auto px-4 py-2 border focus:bg-white placeholder:text-pink-400 text-pink-950 border-pink-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent"
         />
         <input
           id="phone"
           type="tel"
+          minlength="10"
+          maxlength="10"
+          required
           placeholder={t("Admission.Form.Phone")}
           class="w-full md:w-auto px-4 py-2 border focus:bg-white placeholder:text-pink-400 text-pink-950 border-pink-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent"
         />
@@ -167,6 +254,26 @@ const t = useTranslations(lang)
       <p class="text-sm md:text-base text-pink-950 text-center max-w-3xl">
         {t("Admission.FAQ.Description")}
       </p>
+      <FAQItem
+        question={t("Admission.FAQ.Question1")}
+        answer={t("Admission.FAQ.Answer1")}
+      />
+      <FAQItem
+        question={t("Admission.FAQ.Question2")}
+        answer={t("Admission.FAQ.Answer2")}
+      />
+      <FAQItem
+        question={t("Admission.FAQ.Question3")}
+        answer={t("Admission.FAQ.Answer3")}
+      />
+      <FAQItem
+        question={t("Admission.FAQ.Question4")}
+        answer={t("Admission.FAQ.Answer4")}
+      />
+      <FAQItem
+        question={t("Admission.FAQ.Question5")}
+        answer={t("Admission.FAQ.Answer5")}
+      />
     </div>
   </div>
 </Layout>
@@ -195,9 +302,6 @@ const t = useTranslations(lang)
       // Append the custom subject to the form data
       formData.append("subject", subject)
 
-      const object = Object.fromEntries(formData)
-      const json = JSON.stringify(object)
-
       const originalText = submitBtn?.textContent
 
       submitBtn.textContent = loading ?? "Submitting..."
@@ -206,7 +310,7 @@ const t = useTranslations(lang)
       try {
         const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
-          body: json,
+          body: formData,
         })
 
         const data = await response.json()
