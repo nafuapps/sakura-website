@@ -11,7 +11,7 @@ export const ui = {
   //English
   en: {
     //Menu bar
-    EnrollButton: "Enroll Now",
+    EnrollButton: "Enquire Today",
     Home: "Home",
     Admission: "Admission",
     Curriculum: "Curriculum",
@@ -19,65 +19,96 @@ export const ui = {
     Blogs: "Blogs",
     JoinUs: "Join Us",
     Career: "Career",
+    Address: "RNB Road, Baganshali, Kokrajhar, 783370",
+    Phone: "+91-9181600286",
     YouTube: "YouTube",
     Instagram: "Instagram",
     Facebook: "Facebook",
-    //Header
-    "HeaderTicker.Location": "RNB Road, Baganshali, Kokrajhar, 783370",
-    "HeaderTicker.Phone": "9181600286",
-    "HeaderTicker.Email": "sakurapreschool.kok@gmail.com",
+    Email: "Email",
     //Footer
-    "SiteInfo.Copyright": "Copyright @ 2026 by ",
+    "Footer.QuickLinks": "Quick Links",
+    "Footer.Logo.Subtitle":
+      "Nurturing curiosity through a playway-inspired environment that celebrates the unique journey of every childhood.",
+    "Footer.Visit": "Visit Us",
+    "Footer.SocialMedia": "Connect with Us",
+    //SiteInfo
+    "SiteInfo.Copyright": "Copyright @ 2026 ",
     "SiteInfo.Developer": "Designed & developed by ",
     //Home Page
-    "Home.Hero.Title": "Welcome to Sakura Preschool",
-    "Home.Hero.Subtitle": "Nurturing young minds with love and care",
-    "Home.Hero.Primary": "Contact us",
+    "Home.Hero.Tagline": "Enrollment Open for 2026-27",
+    "Home.Hero.Title": "Where Every Child Can ",
+    "Home.Hero.Title.Inner": "Bloom",
+    "Home.Hero.Subtitle":
+      "At Sakura Preschool, we nurture curiosity through an organic, playway-based environment that celebrates the unique journey of every little learner",
+    "Home.Hero.Primary": "Get a free trial class now",
     "Home.Hero.Secondary": "Explore more",
-    "Home.About.Title": "About Sakura Preschool",
-    "Home.About.Description":
-      "At Sakura Preschool, we believe in fostering a love for learning in every child. Our dedicated team of educators creates a nurturing environment where children can explore, discover, and grow. We offer a comprehensive curriculum that focuses on the holistic development of each child, including cognitive, social, emotional, and physical growth. Join us on this exciting journey of early childhood education!",
-    "Home.About.Point1.Title": "Experienced Educators",
-    "Home.About.Point1.Description":
-      "Team of passionate teachers dedicated to providing a nurturing and stimulating environment for children to learn and grow",
-    "Home.About.Point2.Title": "Play-Based Learning",
-    "Home.About.Point2.Description":
-      "Power of play as a fundamental tool for learning and encourage creativity, critical thinking, and social skills through play-based activities.",
-    "Home.About.Point3.Title": "Safe and Inclusive Environment",
-    "Home.About.Point3.Description":
-      "Prioritize the safety and well-being of every child, creating an inclusive environment where diversity is celebrated and every child feels valued and respected.",
-    "Home.About.Point4.Title": "Community Engagement",
-    "Home.About.Point4.Description":
-      "Fostering a strong sense of community, encouraging involvement and collaboration from families to create a supportive network",
+    "Home.Mission.Title": "Our Mission",
+    "Home.Mission.Description": `"To provide affordable, high-quality early childhood care and education in smaller towns of Northeast India"`,
+    "Home.Mission.Subtitle":
+      "We strive to be a trusted partner to parents, offering a safe, inclusive space where every child learns, grows with peers, and develops into a confident, caring, and empathetic individual.",
+    "Home.Mission.Point1.Title": "Experienced Educators",
+    "Home.Mission.Point2.Title": "Play-Based Learning",
+    "Home.Mission.Point3.Title": "Safe and Inclusive Environment",
+    "Home.Mission.Point4.Title": "Community Engagement",
+    "Home.Metrics.Title": "Success Factors",
+    "Home.Metrics.Description":
+      "Numbers that define our commitment to excellence in early childhood education",
+    "Home.Metrics.Point1.Title": "15+",
+    "Home.Metrics.Point1.Desc": "YEARS OF EXCELLENCE",
+    "Home.Metrics.Point2.Title": "100%",
+    "Home.Metrics.Point2.Desc": "SAFE ENVIRONMENT",
+    "Home.Metrics.Point3.Title": "10:1",
+    "Home.Metrics.Point3.Desc": "STUDENT-TEACHER RATIO",
     "Home.Programs.Title": "Our Programs",
     "Home.Programs.Description":
       "Explore the various programs we offer at Sakura Preschool.",
     "Home.Programs.Program1.Title": "Explorers",
-    "Home.Programs.Program1.Subtitle":
-      "A sensory-rich program for toddlers aged 2-3 years",
+    "Home.Programs.Program1.Tag": "PLAYGROUP",
+    "Home.Programs.Program1.Subtitle": "2-3 years",
     "Home.Programs.Program1.Description":
-      "A program focusing on sensory exploration and socialization.",
+      "A foundation program focusing on sensory exploration and socialization skills through play-based activities",
     "Home.Programs.Program2.Title": "Discoverers",
-    "Home.Programs.Program2.Subtitle":
-      "A comprehensive program for children aged 3-4 years",
+    "Home.Programs.Program2.Tag": "NURSERY",
+    "Home.Programs.Program2.Subtitle": "3-4 years",
     "Home.Programs.Program2.Description":
       "A comprehensive program for preparing children for kindergarten with a focus on literacy, numeracy, and social skills",
     "Home.Programs.Program3.Title": "Creators",
-    "Home.Programs.Program3.Subtitle":
-      "A hands-on program for children aged 4+ years",
+    "Home.Programs.Program3.Tag": "KINDERGARTEN",
+    "Home.Programs.Program3.Subtitle": "4+ years",
     "Home.Programs.Program3.Description":
       "A hands-on program encouraging creativity, critical thinking, and problem-solving skills",
     "Home.ProgramItem.LearnMore": "Learn More",
-    "Home.Why.Title": "Why Choose Sakura Preschool?",
+    "Home.Why.Title": "Why Choose Sakura?",
     "Home.Why.Description":
-      "Discover the unique benefits of our early childhood education programs",
+      "We provide more than just childcare - we offer a holistic early childhood education experience",
     "Home.Why.Point1.Title": "Safety regulations adherence",
+    "Home.Why.Point1.Description":
+      "Strict adherence to safety regulations and protocols to ensure a healthy environment for children",
     "Home.Why.Point2.Title": "CCTV Surveillance & monitoring",
+    "Home.Why.Point2.Description":
+      "24/7 CCTV monitoring to ensure the security of children and provide peace of mind to parents",
     "Home.Why.Point3.Title": "Medical & emergency preparedness",
-    "Home.Why.Point4.Title": "Qualified, verified & trained staff",
-    "Home.Why.Point5.Title": "Child-friendly infrastructure & play area",
+    "Home.Why.Point3.Description":
+      "Comprehensive medical and emergency preparedness plans and equipment in place to handle any situation",
+    "Home.Why.Point4.Title": "Qualified & verified staff",
+    "Home.Why.Point4.Description":
+      "All staff members are trained to provide the highest level of care and education to children",
+    "Home.Why.Point5.Title": "Best-in-class infrastructure & play area",
+    "Home.Why.Point5.Description":
+      "Child-friendly infrastructure and play areas designed to promote physical activity, creativity, and social interaction",
     "Home.Why.Point6.Title": "Transparent and experienced management",
+    "Home.Why.Point6.Description":
+      "Professional founding team with a proven track record of providing quality early childhood education and care",
+    "Home.Gallery.Title": "Life at Sakura",
+    "Home.Gallery.Description":
+      "A glimpse into the joyful moments in our preschool premises",
+    "Home.Marketing.Title": "Ready to watch your child bloom?",
+    "Home.Marketing.Desc":
+      "Limited slots available for current enrollment year. Schedule a visit to Sakura Preschool today.",
+    "Home.Marketing.PrimaryCTA": "Enquire Now",
+    "Home.Marketing.SecondaryCTA": "Call us Today",
     //Admission Page
+    "Admission.Hero.Tagline": "Embracing local culture",
     "Admission.Hero.Title": "Join the Sakura Family",
     "Admission.Hero.Subtitle":
       "Give your child the best start in life for a bright future",

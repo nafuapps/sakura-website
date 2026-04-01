@@ -1,0 +1,16 @@
+---
+import { getLangFromUrl, useTranslatedPath, useTranslations } from "@i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
+---
+
+<a
+  href={translatePath("#about")}
+  class="hidden md:flex flex-row text-nowrap items-center justify-center bg-slate-200 hover:bg-slate-300 hover:cursor-pointer rounded-full py-3 md:py-4 px-5 md:px-6"
+>
+  <span class="text-slate-800 font-bold text-base md:text-lg">
+    {t("Home.Hero.Secondary")}
+  </span>
+</a>

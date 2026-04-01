@@ -1,0 +1,121 @@
+---
+import EnrollButton from "./EnrollButton.astro"
+import Logo from "@assets/logo.svg"
+import Open from "@assets/open.svg"
+import Close from "@assets/close.svg"
+import type { SitePagesType } from "@utils/commonTypes"
+// import LanguageButton from "./LanguageButton.astro"
+import { useTranslatedPath, useTranslations } from "@i18n/utils"
+import { getLangFromUrl } from "@i18n/utils"
+import NavItem from "./NavItem.astro"
+
+interface Props {
+  selectedTab: SitePagesType
+}
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
+const { selectedTab = "home" } = Astro.props
+---
+
+<div
+  id="Menu"
+  class="flex fixed z-10 top-0 bg-white justify-center w-full items-center shadow-sm"
+>
+  <div
+    id="Menu_Content"
+    class="flex flex-row w-full items-center justify-between gap-1 md:gap-2 max-w-7xl px-4 md:px-6 py-3 md:py-4"
+  >
+    <a href={translatePath("/")} id="Menu_Logo">
+      <Logo class="h-7 md:h-9 w-auto hover:cursor-pointer" />
+    </a>
+    <div
+      class="flex flex-row-reverse md:flex-row gap-2 md:gap-20 items-center justify-end"
+    >
+      <a id="Menu_Open" class="flex md:hidden"
+        ><Open class="h-7 w-auto hover:cursor-pointer" /></a
+      >
+      <a id="Menu_Close" class="hidden md:hidden"
+        ><Close class="h-7 w-auto hover:cursor-pointer" /></a
+      >
+      <nav
+        id={"Menu_NavLinks"}
+        class="hidden shadow-sm md:shadow-none md:flex flex-col md:flex-row fixed md:relative top-16 right-6 md:top-0 md:right-0 bg-white rounded px-3 py-2 md:p-0 items-start md:items-center justify-center gap-4 md:gap-8"
+      >
+        <NavItem
+          href={translatePath("/")}
+          selected={selectedTab == "home"}
+          title={t("Home")}
+        />
+        <NavItem
+          href={translatePath("/admission")}
+          selected={selectedTab == "admission"}
+          title={t("Admission")}
+        />
+        <NavItem
+          href={translatePath("/curriculum")}
+          selected={selectedTab == "curriculum"}
+          title={t("Curriculum")}
+        />
+        <NavItem
+          href={translatePath("/about")}
+          selected={selectedTab == "about"}
+          title={t("About")}
+        />
+        <!-- <NavItem
+          href={translatePath("/career")}
+          selected={selectedTab == "career"}
+          title={t("Career")}
+          hideSmall
+        />
+        <NavItem
+          href={translatePath("/blogs")}
+          selected={selectedTab == "blogs"}
+          title={t("Blogs")}
+          hideSmall
+        /> -->
+      </nav>
+      <!-- <LanguageButton /> -->
+      <EnrollButton />
+    </div>
+  </div>
+</div>
+
+<script>
+  const navLinks = document.querySelector("nav#Menu_NavLinks")
+  const openButton = document.querySelector("a#Menu_Open")
+  const closeButton = document.querySelector("a#Menu_Close")
+
+  function openMenu() {
+    openButton?.classList.add("hidden")
+    openButton?.classList.remove("flex")
+    closeButton?.classList.add("flex")
+    closeButton?.classList.remove("hidden")
+    navLinks?.classList.add("flex")
+    navLinks?.classList.remove("hidden")
+  }
+
+  function closeMenu() {
+    openButton?.classList.remove("hidden")
+    openButton?.classList.add("flex")
+    closeButton?.classList.remove("flex")
+    closeButton?.classList.add("hidden")
+    navLinks?.classList.add("hidden")
+    navLinks?.classList.remove("flex")
+  }
+
+  openButton?.addEventListener("click", () => {
+    openMenu()
+  })
+  closeButton?.addEventListener("click", () => {
+    closeMenu()
+  })
+  document.addEventListener("click", (event) => {
+    if (
+      !navLinks?.contains(event.target as Node) &&
+      !openButton?.contains(event.target as Node)
+    ) {
+      if (closeButton?.classList.contains("flex")) closeMenu()
+    }
+  })
+</script>

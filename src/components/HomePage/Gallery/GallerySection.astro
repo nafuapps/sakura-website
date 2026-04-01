@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets"
+import gallery1 from "@assets/gallery1.jpg"
+import gallery2 from "@assets/gallery2.jpg"
+import gallery3 from "@assets/gallery3.jpg"
+import gallery4 from "@assets/gallery4.jpg"
+import gallery5 from "@assets/gallery5.jpg"
+import gallery6 from "@assets/gallery6.jpg"
+
+import HomeContentWrapper from "../HomeContentWrapper.astro"
+import HomeSectionWrapper from "../HomeSectionWrapper.astro"
+import SectionDescription from "../SectionDescription.astro"
+import SectionTitle from "../SectionTitle.astro"
+import { getLangFromUrl, useTranslations } from "@i18n/utils"
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<HomeSectionWrapper id="gallery" bgVariant="bg-white">
+  <HomeContentWrapper slot="content">
+    <SectionTitle title={t("Home.Gallery.Title")} />
+    <SectionDescription description={t("Home.Gallery.Description")} />
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <Image
+        src={gallery1}
+        alt="Gallery Image 1"
+        class="w-full max-h-80 md:max-h-96 object-cover self-center rounded-2xl"
+      />
+      <Image
+        src={gallery2}
+        alt="Gallery Image 2"
+        class="w-full max-h-80 md:max-h-96 object-cover self-center rounded-2xl"
+      />
+      <Image
+        src={gallery3}
+        alt="Gallery Image 3"
+        class="w-full max-h-80 md:max-h-96 object-cover self-center rounded-2xl"
+      />
+      <Image
+        src={gallery4}
+        alt="Gallery Image 4"
+        class="w-full max-h-80 md:max-h-96 object-cover self-center rounded-2xl"
+      />
+      <Image
+        src={gallery5}
+        alt="Gallery Image 5"
+        class="w-full max-h-80 md:max-h-96 object-cover self-center rounded-2xl"
+      />
+      <Image
+        src={gallery6}
+        alt="Gallery Image 6"
+        class="w-full max-h-80 md:max-h-96 object-cover self-center rounded-2xl"
+      />
+    </div>
+  </HomeContentWrapper>
+</HomeSectionWrapper>

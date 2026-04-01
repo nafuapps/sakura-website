@@ -1,0 +1,20 @@
+---
+import { getLangFromUrl, useTranslations } from "@i18n/utils"
+
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<div
+  id="Footer_SiteInfoBar"
+  class="hidden md:flex md:justify-center md:w-full md:items-center md:py-2 md:px-8 bg-pink-200"
+>
+  <div
+    id="SiteInfoContent"
+    class="flex md:flex-row md:gap-4 md:items-center md:justify-between md:w-full md:max-w-7xl md:text-tiny text-slate-800"
+  >
+    <span>{t("SiteInfo.Copyright")}<b>Sakura Preschool</b></span>
+    <a href="https://nafuapps.in" target="_blank" rel="noopener noreferrer">
+      {t("SiteInfo.Developer")}<b>NafuApps</b>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+---
+import {
+  UserRoundKey,
+  Cctv,
+  Stethoscope,
+  ShieldCheck,
+  Fence,
+  Medal,
+} from "@lucide/astro"
+import WhyPoint from "./WhyPoint.astro"
+import { getLangFromUrl, useTranslations } from "@i18n/utils"
+import HomeSectionWrapper from "../HomeSectionWrapper.astro"
+import HomeContentWrapper from "../HomeContentWrapper.astro"
+import SectionTitle from "../SectionTitle.astro"
+import SectionDescription from "../SectionDescription.astro"
+
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<HomeSectionWrapper id="why" bgVariant="bg-white">
+  <HomeContentWrapper slot="content">
+    <SectionTitle title={t("Home.Why.Title")} />
+    <SectionDescription description={t("Home.Why.Description")} />
+    <div id="why-points" class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">
+      <WhyPoint
+        title={t("Home.Why.Point6.Title")}
+        description={t("Home.Why.Point6.Description")}
+        icon={Medal}
+        size="large"
+        cardBgColor="bg-slate-100"
+        titleColor="text-slate-800"
+        iconBgColor="bg-slate-200"
+      />
+
+      <WhyPoint
+        title={t("Home.Why.Point2.Title")}
+        description={t("Home.Why.Point2.Description")}
+        icon={Cctv}
+        size="small"
+        cardBgColor="bg-cyan-100"
+        titleColor="text-cyan-800"
+        iconBgColor="bg-cyan-200"
+      />
+      <WhyPoint
+        title={t("Home.Why.Point3.Title")}
+        description={t("Home.Why.Point3.Description")}
+        icon={Stethoscope}
+        size="small"
+        cardBgColor="bg-lime-100"
+        titleColor="text-lime-800"
+        iconBgColor="bg-lime-200"
+      />
+      <WhyPoint
+        title={t("Home.Why.Point4.Title")}
+        description={t("Home.Why.Point4.Description")}
+        icon={ShieldCheck}
+        size="medium"
+        cardBgColor="bg-yellow-100"
+        titleColor="text-yellow-800"
+        iconBgColor="bg-yellow-200"
+      />
+      <WhyPoint
+        title={t("Home.Why.Point5.Title")}
+        description={t("Home.Why.Point5.Description")}
+        icon={Fence}
+        size="medium"
+        cardBgColor="bg-pink-100"
+        titleColor="text-pink-800"
+        iconBgColor="bg-pink-200"
+      />
+      <WhyPoint
+        title={t("Home.Why.Point1.Title")}
+        description={t("Home.Why.Point1.Description")}
+        icon={UserRoundKey}
+        size="medium"
+        cardBgColor="bg-slate-100"
+        titleColor="text-slate-800"
+        iconBgColor="bg-slate-200"
+      />
+    </div>
+  </HomeContentWrapper>
+</HomeSectionWrapper>

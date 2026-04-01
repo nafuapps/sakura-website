@@ -1,0 +1,59 @@
+---
+import program1 from "@assets/program1.jpg"
+import program2 from "@assets/program2.jpg"
+import program3 from "@assets/program3.jpg"
+import ProgramItem from "./ProgramItem.astro"
+import HomeSectionWrapper from "../HomeSectionWrapper.astro"
+import HomeContentWrapper from "../HomeContentWrapper.astro"
+import { getLangFromUrl, useTranslatedPath, useTranslations } from "@i18n/utils"
+import SectionDescription from "../SectionDescription.astro"
+import SectionTitle from "../SectionTitle.astro"
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
+---
+
+<HomeSectionWrapper id="programs" bgVariant="bg-pink-50">
+  <HomeContentWrapper slot="content">
+    <SectionTitle title={t("Home.Programs.Title")} />
+    <SectionDescription description={t("Home.Programs.Description")} />
+    <div
+      id="programs-list"
+      class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+    >
+      <ProgramItem
+        imageSrc={program1}
+        title={t("Home.Programs.Program1.Title")}
+        subtitle={t("Home.Programs.Program1.Subtitle")}
+        description={t("Home.Programs.Program1.Description")}
+        href={translatePath("/curriculum#explorers")}
+        cta={t("Home.ProgramItem.LearnMore")}
+        tag={t("Home.Programs.Program1.Tag")}
+        bgColor="bg-cyan-300"
+        textColor="text-cyan-700"
+      />
+      <ProgramItem
+        imageSrc={program2}
+        title={t("Home.Programs.Program2.Title")}
+        subtitle={t("Home.Programs.Program2.Subtitle")}
+        description={t("Home.Programs.Program2.Description")}
+        href="/curriculum#discoverers"
+        cta={t("Home.ProgramItem.LearnMore")}
+        tag={t("Home.Programs.Program2.Tag")}
+        bgColor="bg-lime-300"
+        textColor="text-lime-700"
+      />
+      <ProgramItem
+        imageSrc={program3}
+        title={t("Home.Programs.Program3.Title")}
+        subtitle={t("Home.Programs.Program3.Subtitle")}
+        description={t("Home.Programs.Program3.Description")}
+        href="/curriculum#creators"
+        cta={t("Home.ProgramItem.LearnMore")}
+        tag={t("Home.Programs.Program3.Tag")}
+        bgColor="bg-yellow-300"
+        textColor="text-yellow-700"
+      />
+    </div>
+  </HomeContentWrapper>
+</HomeSectionWrapper>

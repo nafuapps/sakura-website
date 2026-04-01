@@ -1,0 +1,61 @@
+---
+import { ChevronRight } from "@lucide/astro"
+import type { bgColor300, textColor700 } from "@utils/commonTypes"
+import { Image } from "astro:assets"
+
+interface Props {
+  imageSrc: ImageMetadata
+  tag: string
+  title: string
+  subtitle: string
+  description: string
+  cta: string
+  href: string
+  bgColor: bgColor300
+  textColor: textColor700
+}
+const {
+  imageSrc,
+  tag,
+  title,
+  subtitle,
+  description,
+  href,
+  cta,
+  bgColor,
+  textColor,
+} = Astro.props
+---
+
+<div class="flex flex-col items-center">
+  <div
+    class={`relative top-10 opacity-90 bg-white ${textColor} text-tiny md:text-xs font-semibold rounded-full flex items-center justify-center px-2 py-1 lg:px-3 md:py-1.5`}
+  >
+    {tag}
+  </div>
+  <Image
+    src={imageSrc}
+    alt={title}
+    class="w-full h-48 object-cover rounded-t-2xl"
+  />
+  <div
+    class="bg-white w-full p-4 md:p-6 flex flex-col items-start gap-3 md:gap-4 rounded-b-2xl"
+  >
+    <div
+      class={`flex items-center justify-center w-auto ${bgColor} rounded-full px-2 py-1 md:px-3 md:py-1.5`}
+    >
+      <p class="text-slate-800 text-tiny md:text-xs">{subtitle}</p>
+    </div>
+    <h5 class={`text-base md:text-lg font-semibold ${textColor} `}>
+      {title}
+    </h5>
+    <p class="text-xs md:text-sm text-slate-500">
+      {description}
+    </p>
+    <a
+      href={href}
+      class="flex items-center text-xs md:text-sm text-pink-800 hover:text-pink-900 hover:underline hover:cursor-pointer"
+      >{cta} <ChevronRight class="text-pink-800 size-3 md:size-3.5" />
+    </a>
+  </div>
+</div>

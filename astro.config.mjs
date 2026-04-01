@@ -17,13 +17,17 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "Noto Sans",
-        cssVariable: "--font-noto-sans",
-      },
-    ],
-  },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Plus Jakarta Sans",
+      cssVariable: "--font-jakarta-sans",
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Be Vietnam Pro",
+      cssVariable: "--font-vietnam-pro",
+    },
+  ],
+  experimental: {},
 })

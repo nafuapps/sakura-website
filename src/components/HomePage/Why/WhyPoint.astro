@@ -1,0 +1,45 @@
+---
+import type { AstroComponent } from "@lucide/astro"
+import type { bgColor100, bgColor200, textColor800 } from "@utils/commonTypes"
+
+interface Props {
+  icon: AstroComponent
+  title: string
+  description: string
+  size?: "small" | "medium" | "large"
+  cardBgColor?: bgColor100
+  iconBgColor?: bgColor200
+  titleColor?: textColor800
+}
+const {
+  icon: Icon,
+  title,
+  description,
+  size = "small",
+  cardBgColor = "bg-white",
+  titleColor = "text-pink-800",
+  iconBgColor = "bg-pink-200",
+} = Astro.props
+---
+
+<div
+  class={`flex flex-col gap-4 col-span-1 row-span-1 ${size === "large" ? "md:col-span-2 md:row-span-2" : size === "medium" ? "md:col-span-2 md:row-span-1" : "md:col-span-1 md:row-span-1"} rounded-2xl ${cardBgColor} p-6 md:p-8`}
+>
+  <div
+    class={`rounded-lg ${iconBgColor} size-9 ${size === "large" ? "md:size-12" : size === "medium" ? "md:size-10" : "md:size-9"} flex items-center justify-center`}
+  >
+    <Icon
+      class={`${titleColor} size-5 ${size === "large" ? "md:size-7" : size === "medium" ? "md:size-6" : "md:size-5"}`}
+    />
+  </div>
+  <h6
+    class={`text-base ${size === "large" ? "md:text-xl" : size === "medium" ? "md:text-lg" : "md:text-base"} ${titleColor}`}
+  >
+    {title}
+  </h6>
+  <p
+    class={`text-sm ${size === "large" ? "md:text-base" : "md:text-sm"} text-slate-600`}
+  >
+    {description}
+  </p>
+</div>

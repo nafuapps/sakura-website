@@ -7,6 +7,7 @@ import web3Icon from "../assets/web3Icon.png"
 import { getLangFromUrl, useTranslations } from "../i18n/utils"
 import { web3FormAccessKey } from "../utils/commonConstants"
 import FAQItem from "../components/FAQItem.astro"
+import { MapPinHouse } from "@lucide/astro"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -19,26 +20,32 @@ const t = useTranslations(lang)
 >
   <div
     id="hero"
-    class="bg-blue-50 border-b-2 border-b-blue-400 border-dashed h-screen flex items-center justify-center px-6 md:px-8 lg:px-12 py-18 md:py-24 lg:py-36"
+    class="bg-blue-50 border-b-2 border-b-blue-400 border-dashed h-screen flex items-center justify-center px-6 md:px-8 md:px-12 py-18 md:py-24 md:py-36"
   >
     <div
       id="hero-content"
-      class="w-full lg:max-w-7xl h-full flex flex-col lg:flex-row gap-10 md:gap-6 lg:gap-8 items-center justify-center"
+      class="w-full md:max-w-7xl h-full flex flex-col md:flex-row gap-10 md:gap-6 md:gap-8 items-center justify-center"
     >
       <div
         id="hero-left"
-        class="flex flex-col gap-4 md:gap-6 lg:gap-8 w-full lg:w-1/2 items-center lg:items-start"
+        class="flex flex-col gap-4 md:gap-6 md:gap-8 w-full md:w-1/2 items-center md:items-start"
       >
         <Image
           src={coverImage}
           alt="Hero Image"
-          class="w-full rounded-lg h-64 md:h-72 lg:h-80 md:w-full object-cover"
+          class="w-full rounded-lg h-64 md:h-72 md:h-80 md:w-full object-cover"
         />
       </div>
       <div
         id="hero-right"
-        class="flex flex-col gap-4 md:gap-5 lg:gap-6 w-full lg:w-1/2 items-center text-center lg:text-end lg:items-end"
+        class="flex flex-col gap-4 md:gap-5 md:gap-6 w-full md:w-1/2 items-center text-center md:text-end md:items-end"
       >
+        <div
+          class="flex items-center gap-0.5 md:gap-1 text-center rounded-full text-tiny md:text-xs px-1 md:px-2 py-0.5 md:py-1 bg-blue-400 text-white"
+        >
+          {t("Admission.Hero.Tagline")}
+          <MapPinHouse class="size-3 md:size-4 text-white" />
+        </div>
         <h1 class="text-2xl md:text-3xl font-bold text-blue-400">
           {t("Admission.Hero.Title")}
         </h1>
@@ -50,11 +57,11 @@ const t = useTranslations(lang)
   </div>
   <div
     id="process"
-    class="flex items-center justify-center px-6 md:px-8 lg:px-12 py-18 md:py-24 lg:py-36"
+    class="flex items-center justify-center px-6 md:px-8 md:px-12 py-18 md:py-24 md:py-36"
   >
     <div
       id="process-content"
-      class="w-full lg:max-w-7xl flex flex-col gap-6 md:gap-8 lg:gap-10 items-center justify-center"
+      class="w-full md:max-w-7xl flex flex-col gap-6 md:gap-8 md:gap-10 items-center justify-center"
     >
       <h2 class="text-xl md:text-2xl font-bold text-pink-400 text-center">
         {t("Admission.Process.Title")}
@@ -68,7 +75,7 @@ const t = useTranslations(lang)
       >
         <div
           id="step1"
-          class="flex flex-col gap-2 md:gap-2.5 lg:gap-3 border border-pink-400 py-2 px-4 rounded-md w-full lg:w-2/3"
+          class="flex flex-col gap-2 md:gap-2.5 md:gap-3 border border-pink-400 py-2 px-4 rounded-md w-full md:w-2/3"
         >
           <h5 class="text-base md:text-lg font-semibold text-pink-400">
             {t("Admission.Process.Step1.Title")}
@@ -79,7 +86,7 @@ const t = useTranslations(lang)
         </div>
         <div
           id="step2"
-          class="flex flex-col gap-2 md:gap-2.5 lg:gap-3 border border-pink-400 py-2 px-4 rounded-md w-full lg:w-2/3"
+          class="flex flex-col gap-2 md:gap-2.5 md:gap-3 border border-pink-400 py-2 px-4 rounded-md w-full md:w-2/3"
         >
           <h5 class="text-base md:text-lg font-semibold text-pink-400">
             {t("Admission.Process.Step2.Title")}
@@ -90,7 +97,7 @@ const t = useTranslations(lang)
         </div>
         <div
           id="step3"
-          class="flex flex-col gap-2 md:gap-2.5 lg:gap-3 border border-pink-400 py-2 px-4 rounded-md w-full lg:w-2/3"
+          class="flex flex-col gap-2 md:gap-2.5 md:gap-3 border border-pink-400 py-2 px-4 rounded-md w-full md:w-2/3"
         >
           <h5 class="text-base md:text-lg font-semibold text-pink-400">
             {t("Admission.Process.Step3.Title")}
@@ -101,13 +108,13 @@ const t = useTranslations(lang)
         </div>
         <div
           id="documents"
-          class="bg-pink-50 rounded-lg w-full lg:w-2/3 py-2 px-4"
+          class="bg-pink-50 rounded-lg w-full md:w-2/3 py-2 px-4"
         >
           <h5 class="text-base md:text-lg font-semibold text-pink-400">
             {t("Admission.Process.Documents.Title")}
           </h5>
           <ul
-            class="list-disc list-inside flex flex-col mt-1 lg:mt-2 gap-1.5 lg:gap-2"
+            class="list-disc list-inside flex flex-col mt-1 md:mt-2 gap-1.5 md:gap-2"
           >
             <li class="text-xs md:text-sm text-pink-950">
               {t("Admission.Process.Documents.List1")}
@@ -129,7 +136,7 @@ const t = useTranslations(lang)
       </div>
       <div
         id="enrollment-annoucement"
-        class="flex flex-col border-2 border-blue-400 items-center bg-blue-50 rounded-lg w-full lg:w-2/3 py-2 md:py-2.5 lg:py-3 px-4 md:px-4.5 lg:px-5 gap-2 md:gap-2.5 lg:gap-3"
+        class="flex flex-col border-2 border-blue-400 items-center bg-blue-50 rounded-lg w-full md:w-2/3 py-2 md:py-2.5 md:py-3 px-4 md:px-4.5 md:px-5 gap-2 md:gap-2.5 md:gap-3"
       >
         <h3 class="text-lg md:text-xl font-semibold text-blue-400 text-center">
           {t("Admission.Process.Enrollment.Title")}
@@ -137,7 +144,7 @@ const t = useTranslations(lang)
         <a
           href="/files/enrollmentForm.pdf"
           download
-          class="bg-blue-400 cursor-pointer rounded-lg py-3 md:py-3.5 lg:py-4 px-4 md:px-4.5 lg:px-5 text-sm md:text-base text-white"
+          class="bg-blue-400 cursor-pointer rounded-lg py-3 md:py-3.5 md:py-4 px-4 md:px-4.5 md:px-5 text-sm md:text-base text-white"
         >
           {t("Admission.Process.Enrollment.DownloadCTA")}
         </a>
@@ -146,11 +153,11 @@ const t = useTranslations(lang)
   </div>
   <div
     id="form"
-    class="flex items-center justify-center px-6 md:px-8 lg:px-12 py-18 md:py-24 lg:py-36 bg-pink-50"
+    class="flex items-center justify-center px-6 md:px-8 md:px-12 py-18 md:py-24 md:py-36 bg-pink-50"
   >
     <div
       id="form-content"
-      class="w-full lg:max-w-7xl flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-10"
+      class="w-full md:max-w-7xl flex flex-col md:flex-row gap-6 md:gap-8 md:gap-10"
     >
       <div id="form-left" class="hidden md:flex">
         <Image
@@ -161,7 +168,7 @@ const t = useTranslations(lang)
       </div>
       <form
         id="form-right"
-        class="flex flex-col gap-4 md:gap-5 lg:gap-6 w-full"
+        class="flex flex-col gap-4 md:gap-5 md:gap-6 w-full"
         action="https://api.web3forms.com/submit"
         method="POST"
         data-loading={t("Admission.Form.Loading")}
@@ -242,11 +249,11 @@ const t = useTranslations(lang)
   </div>
   <div
     id="faq"
-    class="flex items-center justify-center px-6 md:px-8 lg:px-12 py-18 md:py-24 lg:py-36"
+    class="flex items-center justify-center px-6 md:px-8 md:px-12 py-18 md:py-24 md:py-36"
   >
     <div
       id="faq-content"
-      class="w-full lg:max-w-7xl flex flex-col gap-6 md:gap-8 lg:gap-10 items-center justify-center"
+      class="w-full md:max-w-7xl flex flex-col gap-6 md:gap-8 md:gap-10 items-center justify-center"
     >
       <h2 class="text-xl md:text-2xl font-bold text-pink-400 text-center">
         {t("Admission.FAQ.Title")}

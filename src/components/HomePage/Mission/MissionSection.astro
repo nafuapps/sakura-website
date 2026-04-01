@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets"
+import missionLogo from "@assets/missionLogo.png"
+import missionImage from "@assets/missionImage.png"
+import MissionPoint from "./MissionPoint.astro"
+import { getLangFromUrl, useTranslations } from "@i18n/utils"
+import HomeSectionWrapper from "../HomeSectionWrapper.astro"
+import HomeContentWrapper from "../HomeContentWrapper.astro"
+import SectionTitle from "../SectionTitle.astro"
+import SectionDescription from "../SectionDescription.astro"
+
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<HomeSectionWrapper id="mission" bgVariant="bg-pink-50">
+  <HomeContentWrapper slot="content" largeDirection="md:flex-row-reverse">
+    <div
+      class="flex flex-col items-center md:items-start justify-center gap-6 md:gap-8"
+    >
+      <SectionTitle title={t("Home.Mission.Title")} />
+      <div class="bg-yellow-900 w-20 md:w-30 h-1 md:h-1.5 rounded-full"></div>
+      <SectionDescription description={t("Home.Mission.Description")} />
+      <div id="mission-points" class="flex flex-col gap-4 md:gap-5">
+        <MissionPoint
+          title={t("Home.Mission.Point1.Title")}
+          bgColor="bg-lime-300"
+        />
+        <MissionPoint
+          title={t("Home.Mission.Point2.Title")}
+          bgColor="bg-cyan-300"
+        />
+        <MissionPoint
+          title={t("Home.Mission.Point3.Title")}
+          bgColor="bg-yellow-300"
+        />
+        <MissionPoint
+          title={t("Home.Mission.Point4.Title")}
+          bgColor="bg-pink-300"
+        />
+      </div>
+      <div class="w-full rounded-2xl bg-white p-4 md:p-6">
+        <p class="text-tiny md:text-xs text-slate-500 text-center md:text-left">
+          {t("Home.Mission.Subtitle")}
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-start w-full">
+      <Image
+        src={missionImage}
+        alt="Mission Image"
+        class="w-full h-auto object-cover self-center"
+      />
+      <div
+        class="flex items-center justify-center size-44 md:size-48 rounded-lg bg-white relative -top-10 shadow"
+      >
+        <Image
+          src={missionLogo}
+          alt="Mission Logo"
+          class="size-36 md:size-40"
+        />
+      </div>
+    </div>
+  </HomeContentWrapper>
+</HomeSectionWrapper>

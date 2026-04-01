@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets"
+import heroIcon1 from "@assets/heroIcon1.png"
+import heroIcon2 from "@assets/heroIcon2.png"
+import coverImage from "@assets/coverImage1.png"
+import { GraduationCap } from "@lucide/astro"
+import HeroPrimaryButton from "./HeroPrimaryButton.astro"
+import HeroSecondaryButton from "./HeroSecondaryButton.astro"
+import HomeContentWrapper from "../HomeContentWrapper.astro"
+import HomeSectionWrapper from "../HomeSectionWrapper.astro"
+import { getLangFromUrl, useTranslations } from "@i18n/utils"
+
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<HomeSectionWrapper id="hero" bgVariant="bg-pink-50">
+  <HomeContentWrapper slot="content" largeDirection="md:flex-row">
+    <div
+      id="hero-left"
+      class="flex flex-col gap-4 md:gap-5 w-full md:w-1/2 items-start"
+    >
+      <Image
+        src={heroIcon1}
+        alt="Hero Icon"
+        class="hidden md:flex size-20 relative left-8 top-140"
+      />
+      <div
+        class="flex gap-2 items-center rounded-full text-xs px-4 py-1.5 bg-yellow-400 font-semibold text-yellow-950 -rotate-2"
+      >
+        <GraduationCap class="size-4 text-yellow-950" />
+        {t("Home.Hero.Tagline")}
+      </div>
+      <h1 class="text-4xl md:text-6xl leading-tight font-bold text-pink-800">
+        {t("Home.Hero.Title")}
+        <span class="text-cyan-800">{t("Home.Hero.Title.Inner")}</span>
+      </h1>
+      <p class="text-base md:text-xl text-slate-800">
+        {t("Home.Hero.Subtitle")}
+      </p>
+      <div class="flex flex-row gap-4">
+        <HeroPrimaryButton />
+        <HeroSecondaryButton />
+      </div>
+    </div>
+    <div
+      id="hero-right"
+      class="flex flex-col gap-4 md:gap-6 w-full md:w-1/2 items-center md:items-end"
+    >
+      <Image
+        src={heroIcon2}
+        alt="Hero Icon"
+        class="hidden md:flex size-12 opacity-20 relative right-16 -top-20"
+      />
+      <Image
+        src={coverImage}
+        alt="Hero Image"
+        class="rounded-lg h-72 w-full md:h-96 object-cover rotate-2 shadow-2xl"
+      />
+    </div>
+  </HomeContentWrapper>
+</HomeSectionWrapper>

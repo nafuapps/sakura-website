@@ -1,0 +1,27 @@
+---
+import type { AstroComponent } from "@lucide/astro"
+import type { bgColor100, textColor800 } from "@utils/commonTypes"
+
+interface Props {
+  title: string
+  desc: string
+  textColor: textColor800
+  bgColor: bgColor100
+  icon: AstroComponent
+}
+const { title, desc, icon: Icon, textColor, bgColor } = Astro.props
+---
+
+<div
+  class="flex flex-col bg-pink-50 items-center gap-2 md:gap-2.5 p-6 md:p-8 rounded-2xl"
+>
+  <div
+    class={`${bgColor} size-16 flex items-center justify-center rounded-full`}
+  >
+    <Icon class={`size-8  ${textColor}`} />
+  </div>
+  <h4 class={` ${textColor} font-bold text-xl md:text-3xl`}>
+    {title}
+  </h4>
+  <p class="text-slate-500 font-semibold text-xs md:text-sm">{desc}</p>
+</div>

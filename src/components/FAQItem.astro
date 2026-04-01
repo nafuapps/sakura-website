@@ -9,17 +9,17 @@ const { question, answer } = Astro.props
 ---
 
 <details
-  class="group border border-pink-400 rounded-lg p-3 md:p-3.5 lg:p-4 shadow-sm w-full lg:max-w-2xl"
+  class="group border border-pink-400 rounded-lg p-3 md:p-3.5 shadow-2xs w-full md:max-w-2xl"
 >
   <summary
-    class="flex justify-between items-center gap-1 md:gap-1.5 lg:gap-2 text-sm md:text-base cursor-pointer list-none text-pink-400"
+    class="flex justify-between items-center gap-1 md:gap-1.5 text-sm md:text-base cursor-pointer list-none text-pink-400"
   >
     {question}
     <LucideChevronDown
       class="transition-transform duration-300 group-open:rotate-180"
     />
   </summary>
-  <div class="bg-pink-50 rounded-lg mt-2 p-3 md:p-3.5 lg:p-4">
+  <div class="bg-pink-50 rounded-lg mt-2 p-3 md:p-3.5">
     <p class="text-xs md:text-sm">{answer}</p>
   </div>
 </details>

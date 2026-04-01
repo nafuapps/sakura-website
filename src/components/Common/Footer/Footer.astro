@@ -1,0 +1,59 @@
+---
+import LogoWhite from "@assets/logoWhite.svg"
+import {
+  FacebookLink,
+  InstagramLink,
+  SchoolEmailLink,
+  SchoolGoogleLocationLink,
+  SchoolPhoneLink,
+  YouTubeLink,
+} from "@utils/commonConstants"
+import type { LinkListItemType } from "@utils/commonTypes"
+import FooterList from "./FooterList.astro"
+
+import { getLangFromUrl, useTranslatedPath, useTranslations } from "@i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
+
+const siteLinkList: LinkListItemType[] = [
+  { text: t("Admission"), href: translatePath("/admission") },
+  { text: t("Curriculum"), href: translatePath("/curriculum") },
+  { text: t("Blogs"), href: translatePath("/blogs") },
+  { text: t("About"), href: translatePath("/about") },
+  { text: t("JoinUs"), href: translatePath("/career") },
+]
+
+const connectList: LinkListItemType[] = [
+  { text: t("Address"), href: SchoolGoogleLocationLink },
+  { text: t("Phone"), href: SchoolPhoneLink },
+]
+
+const socialLinkList: LinkListItemType[] = [
+  { text: t("YouTube"), href: YouTubeLink },
+  { text: t("Instagram"), href: InstagramLink },
+  { text: t("Facebook"), href: FacebookLink },
+  { text: t("Email"), href: SchoolEmailLink },
+]
+---
+
+<div
+  id="Footer"
+  class="flex justify-center w-full items-center py-6 md:py-8 px-10 md:px-12 bg-pink-800"
+>
+  <div
+    id="Footer_Content"
+    class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full md:max-w-7xl"
+  >
+    <div class="flex flex-col gap-2 md:gap-3 items-start">
+      <LogoWhite class="h-14 w-auto text-pink-50" />
+      <p class="text-tiny md:text-xs text-pink-50">
+        {t("Footer.Logo.Subtitle")}
+      </p>
+    </div>
+    <FooterList title={t("Footer.QuickLinks")} items={siteLinkList} />
+    <FooterList title={t("Footer.Visit")} items={connectList} />
+    <FooterList title={t("Footer.SocialMedia")} items={socialLinkList} newTab />
+  </div>
+</div>
