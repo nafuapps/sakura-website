@@ -1,0 +1,17 @@
+---
+import CurriculumContentWrapper from "../CurriculumContentWrapper.astro"
+import CurriculumSectionDescription from "../CurriculumSectionDescription.astro"
+import CurriculumSectionTitle from "../CurriculumSectionTitle.astro"
+import CurriculumSectionWrapper from "../CurriculumSectionWrapper.astro"
+import { useTranslations, getLangFromUrl } from "@i18n/utils"
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<CurriculumSectionWrapper id="Schedule" bgVariant="bg-pink-50">
+  <CurriculumContentWrapper slot="curriculum-content">
+    <CurriculumSectionTitle title={t("Curriculum.Schedule.Title")} />
+    <CurriculumSectionDescription
+      description={t("Curriculum.Schedule.Description")}
+    />
+  </CurriculumContentWrapper>
+</CurriculumSectionWrapper>

@@ -10,7 +10,7 @@ import AdmissionMarketingCard from "./AdmissionMarketingCard.astro"
 const t = useTranslations(getLangFromUrl(Astro.url))
 ---
 
-<AdmissionSectionWrapper id={"AdmissionHero"} bgVariant="bg-cyan-50">
+<AdmissionSectionWrapper id={"AdmissionHero"} bgVariant="bg-cyan-50" minHScreen>
   <AdmissionContentWrapper
     slot="admission-content"
     largeDirection="md:flex-col"

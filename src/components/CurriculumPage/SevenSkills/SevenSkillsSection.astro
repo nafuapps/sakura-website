@@ -1,0 +1,94 @@
+---
+import CurriculumContentWrapper from "../CurriculumContentWrapper.astro"
+import CurriculumSectionDescription from "../CurriculumSectionDescription.astro"
+import CurriculumSectionTitle from "../CurriculumSectionTitle.astro"
+import CurriculumSectionWrapper from "../CurriculumSectionWrapper.astro"
+import { useTranslations, getLangFromUrl } from "@i18n/utils"
+import SkillBlock from "./SkillBlock.astro"
+import {
+  BicepsFlexed,
+  Goal,
+  HandCoins,
+  Heart,
+  Lightbulb,
+  MessagesSquare,
+  Palette,
+  Trees,
+} from "@lucide/astro"
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<CurriculumSectionWrapper id="7Skills" bgVariant="bg-white">
+  <CurriculumContentWrapper slot="curriculum-content">
+    <CurriculumSectionTitle title={t("Curriculum.7Skills.Title")} />
+    <CurriculumSectionDescription
+      description={t("Curriculum.7Skills.Description")}
+    />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <SkillBlock
+        icon={MessagesSquare}
+        title={t("Curriculum.7Skills.Skill1.Title")}
+        subtitle={t("Curriculum.7Skills.Skill1.Subtitle")}
+        textColor="text-red-800"
+        bgColor="bg-red-200"
+      />
+      <SkillBlock
+        icon={BicepsFlexed}
+        title={t("Curriculum.7Skills.Skill2.Title")}
+        subtitle={t("Curriculum.7Skills.Skill2.Subtitle")}
+        textColor="text-purple-800"
+        bgColor="bg-purple-200"
+      />
+      <SkillBlock
+        icon={Heart}
+        title={t("Curriculum.7Skills.Skill3.Title")}
+        subtitle={t("Curriculum.7Skills.Skill3.Subtitle")}
+        textColor="text-yellow-800"
+        bgColor="bg-yellow-200"
+      />
+      <SkillBlock
+        icon={Lightbulb}
+        title={t("Curriculum.7Skills.Skill4.Title")}
+        subtitle={t("Curriculum.7Skills.Skill4.Subtitle")}
+        textColor="text-cyan-800"
+        bgColor="bg-cyan-200"
+      />
+      <SkillBlock
+        icon={HandCoins}
+        title={t("Curriculum.7Skills.Skill5.Title")}
+        subtitle={t("Curriculum.7Skills.Skill5.Subtitle")}
+        textColor="text-indigo-800"
+        bgColor="bg-indigo-200"
+      />
+      <SkillBlock
+        icon={Palette}
+        title={t("Curriculum.7Skills.Skill6.Title")}
+        subtitle={t("Curriculum.7Skills.Skill6.Subtitle")}
+        textColor="text-orange-800"
+        bgColor="bg-orange-200"
+      />
+      <SkillBlock
+        icon={Trees}
+        title={t("Curriculum.7Skills.Skill7.Title")}
+        subtitle={t("Curriculum.7Skills.Skill7.Subtitle")}
+        textColor="text-lime-800"
+        bgColor="bg-lime-200"
+      />
+      <div
+        class="md:col-span-2 flex flex-col rounded-2xl gap-3 md:gap-4 p-6 md:p-8 bg-pink-800"
+      >
+        <div
+          class="bg-white p-4 rounded-lg size-12 md:size-16 flex items-center justify-center"
+        >
+          <Goal class="size-8 md:size-10 text-pink-800" />
+        </div>
+        <h4 class="text-white text-lg md:text-2xl font-bold">
+          {t("Curriculum.7Skills.Goal.Title")}
+        </h4>
+        <p class="text-xs md:text-sm text-slate-200">
+          {t("Curriculum.7Skills.Goal.Subtitle")}
+        </p>
+      </div>
+    </div>
+  </CurriculumContentWrapper>
+</CurriculumSectionWrapper>

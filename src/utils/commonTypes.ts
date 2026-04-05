@@ -58,3 +58,21 @@ export type bgColor300 =
   | "bg-slate-300"
 
 export type bgLineColor = "bg-slate-200"
+
+export type sevenTextColor =
+  | "text-cyan-800"
+  | "text-yellow-800"
+  | "text-red-800"
+  | "text-lime-800"
+  | "text-indigo-800"
+  | "text-purple-800"
+  | "text-orange-800"
+
+export type sevenBgColor =
+  | "bg-cyan-200"
+  | "bg-yellow-200"
+  | "bg-red-200"
+  | "bg-lime-200"
+  | "bg-indigo-200"
+  | "bg-purple-200"
+  | "bg-orange-200"

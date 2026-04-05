@@ -147,9 +147,11 @@ export const ui = {
     "Admission.Process.Documents.List4": "Child's photo (2)",
     "Admission.Form.Enrollment.Title": "Inquire about Enrollment",
     "Admission.Form.Enrollment.Subtitle":
-      "Have questions or ready to schedule a visit? Fill out this online form and we will reach out within 24 hours.",
+      "Have questions or ready to schedule a visit? Fill out online inquiry form and we will reach out within 24 hours.",
     "Admission.Form.Enrollment.Phone": "PHONE",
     "Admission.Form.Enrollment.Email": "EMAIL",
+    "Admission.Form.Enrollment.Download.Subtitle":
+      "Or you can download and print our application form, fill it out, and schedule a visit directly",
     "Admission.Form.Enrollment.DownloadCTA": "Download Application Form",
     "Admission.Form.Form.Description":
       "Get in touch for admission enquiry or any other questions to schedule a visit",
@@ -190,9 +192,53 @@ export const ui = {
     "Admission.FAQ.Answer6":
       "Yes, we provide professional daycare services till 5:00 PM for working parents. For more details, please contact us directly.",
     //Curriculum Page
-    "Curriculum.Hero.Tagline": "Our Curriculum",
-    "Curriculum.Hero.Title": "A Holistic Approach to Early Childhood Education",
-    "Curriculum.Hero.Subtitle": "",
+    "Curriculum.Hero.Tagline": "CURRICULUM DESIGNED FOR LEARNING",
+    "Curriculum.Hero.Title": "Nurturing curiosity through",
+    "Curriculum.Hero.Title.Inner": "Play",
+    "Curriculum.Hero.Subtitle":
+      "Our curriculum is designed to spark curiosity through a child-centric, playful approach that values every moment of discovery.",
+    "Curriculum.Hero.Primary": "Download Curriculum Brochure",
+    "Curriculum.7Skills.Title": "Sakura's 7 Focus Points",
+    "Curriculum.7Skills.Description":
+      "Our playway approach integrates these seven fundamental domains into daily adventures, ensuring a holistic development of your child's potential.",
+    "Curriculum.7Skills.Skill1.Title": "Language",
+    "Curriculum.7Skills.Skill1.Subtitle":
+      "Enhancing vocabulary and self-expression through storytelling, puppetry, and phonics fun.",
+    "Curriculum.7Skills.Skill2.Title": "Physical",
+    "Curriculum.7Skills.Skill2.Subtitle":
+      "Gross and fine motor skill development through indoor gym play and creative sand art.",
+    "Curriculum.7Skills.Skill3.Title": "Emotional",
+    "Curriculum.7Skills.Skill3.Subtitle":
+      "Building resilience, empathy, and social confidence through group activities and mindful play.",
+    "Curriculum.7Skills.Skill4.Title": "Cognitive",
+    "Curriculum.7Skills.Skill4.Subtitle":
+      "Critical thinking and logical reasoning fostered through puzzles, blocks, and early math games.",
+    "Curriculum.7Skills.Skill5.Title": "Practical",
+    "Curriculum.7Skills.Skill5.Subtitle":
+      "Encouraging independence through guided mealtime, dressing habits, and organizing their space.",
+    "Curriculum.7Skills.Skill6.Title": "Creative",
+    "Curriculum.7Skills.Skill6.Subtitle":
+      "Expressive arts including painting, music, and dramatic play to let imagination run wild.",
+    "Curriculum.7Skills.Skill7.Title": "Nature",
+    "Curriculum.7Skills.Skill7.Subtitle":
+      "Outdoor gardening, sensory walks, and weather observation to connect children with the natural world around them.",
+    "Curriculum.7Skills.Goal.Title": "Our Goal",
+    "Curriculum.7Skills.Goal.Subtitle":
+      "Building a strong foundation for a lifetime of excellence and wonder.",
+    "Curriculum.Schedule.Title": "A Day at Sakura",
+    "Curriculum.Schedule.Description":
+      "Our thoughtfully designed daily schedule balances structured learning with free play, to create a consistent routine",
+    "Curriculum.Milestones.Title": "Milestones of Growth",
+    "Curriculum.Milestones.Description":
+      "A roadmap for your child's developmental journey through thematic exploration.",
+    "Curriculum.Daycare.Title": "Sakura Daycare: A Home Away from Home",
+    "Curriculum.Daycare.Description":
+      "Extending our philosophy beyond school hours, our daycare provides a safe, hygienic, and stimulating environment for children until 5:00 PM.",
+    "Curriculum.Marketing.Title": "Start Your Child's Learning Journey",
+    "Curriculum.Marketing.Description":
+      "Limited seats available for the upcoming academic session. Book a personalized school tour today and see how your child can bloom.",
+    "Curriculum.Marketing.Primary": "Enroll Now",
+    "Curriculum.Marketing.Secondary": "Talk to an Expert",
   },
   //Assamese
   as: {},

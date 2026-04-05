@@ -12,21 +12,114 @@ import AdmissionSectionWrapper from "../AdmissionSectionWrapper.astro"
 import FormContactItem from "./FormContactItem.astro"
 import { Mail, Phone } from "@lucide/astro"
 import FormLabel from "./FormLabel.astro"
+import FormDownloadButton from "./FormDownloadButton.astro"
+import AdmissionSectionTitle from "../AdmissionSectionTitle.astro"
+import AdmissionSectionDescription from "../AdmissionSectionDescription.astro"
 const t = useTranslations(getLangFromUrl(Astro.url))
 ---
 
-<AdmissionSectionWrapper id={"AdmissionProcess"} bgVariant="bg-cyan-50">
+<AdmissionSectionWrapper id={"form"} bgVariant="bg-cyan-50">
   <AdmissionContentWrapper slot="admission-content">
+    <AdmissionSectionTitle title={t("Admission.Form.Enrollment.Title")} />
     <div
       class="flex bg-white p-6 md:p-10 flex-col md:flex-row gap-6 md:gap-8 md:w-4/5 rounded-2xl shadow-2xl"
     >
       <div id="form-left" class="w-full md:w-1/2 flex flex-col gap-4 md:gap-6">
-        <h5 class="text-lg md:text-2xl font-bold text-cyan-800">
-          {t("Admission.Form.Enrollment.Title")}
-        </h5>
-        <p class="text-sm md:text-base text-slate-600">
-          {t("Admission.Form.Enrollment.Subtitle")}
-        </p>
+        <AdmissionSectionDescription
+          description={t("Admission.Form.Enrollment.Subtitle")}
+        />
+        <form
+          id="inquiry-form"
+          class="flex flex-col gap-4 md:gap-5 w-full"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          data-loading={t("Admission.Form.Loading")}
+        >
+          <input type="hidden" name="access_key" value={web3FormAccessKey} />
+          <FormLabel id="parentName" title={t("Admission.Form.Parent.Label")} />
+          <input
+            id="parentName"
+            type="text"
+            required
+            placeholder={t("Admission.Form.Parent.Placeholder")}
+            class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
+          />
+          <FormLabel id="childName" title={t("Admission.Form.Child.Label")} />
+          <input
+            id="childName"
+            type="text"
+            required
+            placeholder={t("Admission.Form.Child.Placeholder")}
+            class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
+          />
+          <FormLabel id="age" title={t("Admission.Form.Age.Label")} />
+          <input
+            id="age"
+            type="tel"
+            min="1"
+            max="10"
+            required
+            placeholder={t("Admission.Form.Age.Placeholder")}
+            class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
+          />
+          <FormLabel id="phone" title={t("Admission.Form.Phone.Label")} />
+          <input
+            id="phone"
+            type="tel"
+            minlength="10"
+            maxlength="10"
+            required
+            placeholder={t("Admission.Form.Phone.Placeholder")}
+            class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
+          />
+          <FormLabel id="email" title={t("Admission.Form.Email.Label")} />
+          <input
+            id="email"
+            type="email"
+            placeholder={t("Admission.Form.Email.Placeholder")}
+            class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
+          />
+          <FormLabel id="message" title={t("Admission.Form.Message.Label")} />
+          <textarea
+            id="message"
+            rows="3"
+            placeholder={t("Admission.Form.Message.Placeholder")}
+            class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
+          ></textarea>
+          <button
+            id="submit"
+            type="submit"
+            class="w-full px-4 py-2 border-2 text-sm md:text-base focus:border-pink-700 focus:outline-none bg-pink-700 text-white rounded-full hover:bg-pink-800"
+          >
+            {t("Admission.Form.Submit")}
+          </button>
+          <div
+            id="form-secure"
+            class="flex flex-row items-center justify-center gap-1 md:gap-1.5 rounded-md bg-cyan-50 px-2 md:px-3 py-1 md:py-1.5"
+          >
+            <Image
+              src={web3Icon}
+              alt="Web3 Icon"
+              class="size-4 md:size-5 rounded-full object-cover"
+            />
+            <p class="text-tiny md:text-xs text-slate-500">
+              {t("Admission.Form.Note")}
+            </p>
+          </div>
+        </form>
+      </div>
+      <div
+        class="flex md:w-0.5 md:h-auto h-0.5 w-auto rounded-full bg-slate-200"
+      >
+      </div>
+      <div
+        id="form-right"
+        class="w-full md:w-1/2 flex flex-col gap-6 md:gap-8 items-center md:items-start text-center md:text-start"
+      >
+        <AdmissionSectionDescription
+          description={t("Admission.Form.Enrollment.Download.Subtitle")}
+        />
+        <FormDownloadButton />
         <FormContactItem
           icon={Phone}
           title={t("Admission.Form.Enrollment.Phone")}
@@ -44,92 +137,12 @@ const t = useTranslations(getLangFromUrl(Astro.url))
           bgVariant="bg-pink-200"
         />
       </div>
-      <form
-        id="form-right"
-        class="flex flex-col gap-4 md:gap-5 w-full md:w-1/2"
-        action="https://api.web3forms.com/submit"
-        method="POST"
-        data-loading={t("Admission.Form.Loading")}
-      >
-        <input type="hidden" name="access_key" value={web3FormAccessKey} />
-
-        <FormLabel id="parentName" title={t("Admission.Form.Parent.Label")} />
-        <input
-          id="parentName"
-          type="text"
-          required
-          placeholder={t("Admission.Form.Parent.Placeholder")}
-          class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
-        />
-        <FormLabel id="childName" title={t("Admission.Form.Child.Label")} />
-        <input
-          id="childName"
-          type="text"
-          required
-          placeholder={t("Admission.Form.Child.Placeholder")}
-          class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
-        />
-        <FormLabel id="age" title={t("Admission.Form.Age.Label")} />
-        <input
-          id="age"
-          type="tel"
-          min="1"
-          max="10"
-          required
-          placeholder={t("Admission.Form.Age.Placeholder")}
-          class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
-        />
-        <FormLabel id="phone" title={t("Admission.Form.Phone.Label")} />
-        <input
-          id="phone"
-          type="tel"
-          minlength="10"
-          maxlength="10"
-          required
-          placeholder={t("Admission.Form.Phone.Placeholder")}
-          class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
-        />
-        <FormLabel id="email" title={t("Admission.Form.Email.Label")} />
-        <input
-          id="email"
-          type="email"
-          placeholder={t("Admission.Form.Email.Placeholder")}
-          class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
-        />
-        <FormLabel id="message" title={t("Admission.Form.Message.Label")} />
-        <textarea
-          id="message"
-          rows="3"
-          placeholder={t("Admission.Form.Message.Placeholder")}
-          class="w-full px-4 py-2 border-2 text-sm md:text-base bg-slate-200 focus:bg-white placeholder:text-slate-400 text-pink-700 focus:text-pink-800 border-slate-200 focus:border-pink-700 rounded-md focus:outline-none"
-        ></textarea>
-        <button
-          id="submit"
-          type="submit"
-          class="w-full px-4 py-2 border-2 text-sm md:text-base focus:border-pink-700 focus:outline-none bg-pink-700 text-white rounded-full hover:bg-pink-800"
-        >
-          {t("Admission.Form.Submit")}
-        </button>
-        <div
-          id="form-secure"
-          class="flex flex-row items-center justify-center gap-1 md:gap-1.5 rounded-md bg-cyan-50 px-2 md:px-3 py-1 md:py-1.5"
-        >
-          <Image
-            src={web3Icon}
-            alt="Web3 Icon"
-            class="size-4 md:size-5 rounded-full object-cover"
-          />
-          <p class="text-tiny md:text-xs text-slate-500">
-            {t("Admission.Form.Note")}
-          </p>
-        </div>
-      </form>
     </div>
   </AdmissionContentWrapper>
 </AdmissionSectionWrapper>
 
 <script>
-  const form = document.getElementById("form-right") as HTMLFormElement
+  const form = document.getElementById("inquiry-form") as HTMLFormElement
   const submitBtn = form?.querySelector(
     'button[type="submit"]',
   ) as HTMLButtonElement

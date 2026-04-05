@@ -1,0 +1,19 @@
+---
+import type { AstroComponent } from "@lucide/astro"
+import type { sevenBgColor, sevenTextColor } from "@utils/commonTypes"
+
+interface Props {
+  icon: AstroComponent
+  title: string
+  bgColor: sevenBgColor
+  textColor: sevenTextColor
+}
+const { icon: Icon, title, bgColor, textColor } = Astro.props as Props
+---
+
+<div
+  class={`flex flex-row items-center justify-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-1.5 rounded-full ${bgColor} shadow`}
+>
+  <Icon class={`size-3 md:size-3.5 ${textColor}`} />
+  <p class={`text-tiny md:text-xs font-semibold ${textColor}`}>{title}</p>
+</div>

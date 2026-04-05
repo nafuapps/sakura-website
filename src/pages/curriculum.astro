@@ -1,4 +1,10 @@
 ---
+import CurriculumHeroSection from "@components/CurriculumPage/CurriculumHero/CurriculumHeroSection.astro"
+import CurriculumMarketingSection from "@components/CurriculumPage/CurriculumMarketing/CurriculumMarketingSection.astro"
+import DaycareSection from "@components/CurriculumPage/Daycare/DaycareSection.astro"
+import MilestonesSection from "@components/CurriculumPage/Milestones/MilestonesSection.astro"
+import ScheduleSection from "@components/CurriculumPage/Schedule/ScheduleSection.astro"
+import SevenSkillsSection from "@components/CurriculumPage/SevenSkills/SevenSkillsSection.astro"
 import Layout from "../layouts/Layout.astro"
 ---
 
@@ -7,5 +13,10 @@ import Layout from "../layouts/Layout.astro"
   description="Curriculum page for Sakura Preschool in Kokrajhar - Find all curriculum related details here"
   currentTab="curriculum"
 >
-  <div></div>
+  <CurriculumHeroSection />
+  <SevenSkillsSection />
+  <ScheduleSection />
+  <MilestonesSection />
+  <DaycareSection />
+  <CurriculumMarketingSection />
 </Layout>

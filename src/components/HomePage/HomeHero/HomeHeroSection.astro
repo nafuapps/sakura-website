@@ -13,7 +13,7 @@ import { getLangFromUrl, useTranslations } from "@i18n/utils"
 const t = useTranslations(getLangFromUrl(Astro.url))
 ---
 
-<HomeSectionWrapper id="hero" bgVariant="bg-pink-50">
+<HomeSectionWrapper id="hero" bgVariant="bg-pink-50" minHScreen>
   <HomeContentWrapper slot="home-content" largeDirection="md:flex-row">
     <div
       id="hero-left"

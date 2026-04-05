@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets"
+import { Sparkles } from "@lucide/astro"
+import curriculumCoverImage from "@assets/curriculumCoverImage.jpg"
+import CurriculumContentWrapper from "../CurriculumContentWrapper.astro"
+import CurriculumSectionWrapper from "../CurriculumSectionWrapper.astro"
+import { useTranslations, getLangFromUrl } from "@i18n/utils"
+import CurriculumHeroPrimaryButton from "./CurriculumHeroPrimaryButton.astro"
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<CurriculumSectionWrapper id="CurriculumHero" bgVariant="bg-pink-50" minHScreen>
+  <CurriculumContentWrapper
+    slot="curriculum-content"
+    largeDirection="md:flex-row"
+  >
+    <div
+      id="hero-left"
+      class="flex flex-col gap-4 md:gap-5 w-full md:w-1/2 items-center text-center md:text-start md:items-start"
+    >
+      <div
+        class="flex gap-2 items-center rounded-full text-xs px-4 py-1.5 bg-yellow-400 font-semibold text-yellow-950 -rotate-2"
+      >
+        <Sparkles class="size-4 text-yellow-950" />
+        {t("Curriculum.Hero.Tagline")}
+      </div>
+      <h1 class="text-4xl md:text-6xl leading-tight font-black text-pink-800">
+        {t("Curriculum.Hero.Title")}
+        <span class="text-cyan-800">{t("Curriculum.Hero.Title.Inner")}</span>
+      </h1>
+      <p class="text-base md:text-xl text-slate-800">
+        {t("Curriculum.Hero.Subtitle")}
+      </p>
+      <CurriculumHeroPrimaryButton />
+    </div>
+    <div
+      id="hero-right"
+      class="flex flex-col gap-4 md:gap-6 w-full md:w-1/2 items-center md:items-end"
+    >
+      <Image
+        src={curriculumCoverImage}
+        alt="Hero Image"
+        class="rounded-2xl border-4 border-white h-72 w-full md:h-96 object-cover rotate-2 shadow-2xl"
+      />
+    </div>
+  </CurriculumContentWrapper>
+</CurriculumSectionWrapper>
