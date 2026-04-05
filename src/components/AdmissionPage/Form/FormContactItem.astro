@@ -1,0 +1,40 @@
+---
+import type { bgColor200, textColor800 } from "@utils/commonTypes"
+import type { AstroComponent } from "@lucide/astro"
+
+interface Props {
+  icon: AstroComponent
+  title: string
+  subtitle: string
+  href: string
+  textVariant: textColor800
+  bgVariant: bgColor200
+}
+const {
+  icon: Icon,
+  title,
+  subtitle,
+  href,
+  textVariant,
+  bgVariant,
+} = Astro.props
+---
+
+<div class="flex flex-row items-center gap-2 md:gap-3">
+  <div
+    class={`flex items-center justify-center size-7 md:size-9 ${bgVariant} rounded-full p-2`}
+  >
+    <Icon class={`size-4 md:size-6 ${textVariant}`} />
+  </div>
+  <div class="flex flex-col">
+    <p class={`text-tiny md:text-xs font-semibold ${textVariant}`}>
+      {title}
+    </p>
+    <a
+      href={href}
+      class="text-xs md:text-sm text-slate-800 hover:cursor-pointer hover:underline"
+    >
+      {subtitle}
+    </a>
+  </div>
+</div>

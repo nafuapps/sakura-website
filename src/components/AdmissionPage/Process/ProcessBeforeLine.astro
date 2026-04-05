@@ -1,0 +1,15 @@
+---
+import type { bgColor50, bgLineColor } from "@utils/commonTypes"
+
+interface Props {
+  showColor: bgLineColor
+  hide?: boolean
+  hideColor?: bgColor50
+}
+const { showColor, hide, hideColor } = Astro.props
+---
+
+<div
+  class={`hidden md:flex ${hide ? hideColor : showColor} md:h-1 md:w-full grow`}
+>
+</div>

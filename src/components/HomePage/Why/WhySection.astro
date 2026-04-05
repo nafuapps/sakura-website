@@ -11,14 +11,14 @@ import WhyPoint from "./WhyPoint.astro"
 import { getLangFromUrl, useTranslations } from "@i18n/utils"
 import HomeSectionWrapper from "../HomeSectionWrapper.astro"
 import HomeContentWrapper from "../HomeContentWrapper.astro"
-import SectionTitle from "../SectionTitle.astro"
-import SectionDescription from "../SectionDescription.astro"
+import SectionTitle from "../HomeSectionTitle.astro"
+import SectionDescription from "../HomeSectionDescription.astro"
 
 const t = useTranslations(getLangFromUrl(Astro.url))
 ---
 
 <HomeSectionWrapper id="why" bgVariant="bg-white">
-  <HomeContentWrapper slot="content">
+  <HomeContentWrapper slot="home-content">
     <SectionTitle title={t("Home.Why.Title")} />
     <SectionDescription description={t("Home.Why.Description")} />
     <div id="why-points" class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">

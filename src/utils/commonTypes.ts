@@ -25,7 +25,13 @@ export type textColor700 =
   | "text-lime-700"
   | "text-slate-700"
 
-export type bgColor50 = "bg-white" | "bg-pink-50"
+export type bgColor50 =
+  | "bg-white"
+  | "bg-pink-50"
+  | "bg-cyan-50"
+  | "bg-yellow-50"
+  | "bg-lime-50"
+  | "bg-slate-50"
 
 export type bgColor100 =
   | "bg-white"
@@ -50,3 +56,5 @@ export type bgColor300 =
   | "bg-pink-300"
   | "bg-lime-300"
   | "bg-slate-300"
+
+export type bgLineColor = "bg-slate-200"

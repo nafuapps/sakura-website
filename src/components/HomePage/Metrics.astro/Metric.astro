@@ -20,8 +20,10 @@ const { title, desc, icon: Icon, textColor, bgColor } = Astro.props
   >
     <Icon class={`size-8  ${textColor}`} />
   </div>
-  <h4 class={` ${textColor} font-bold text-xl md:text-3xl`}>
+  <h4 class={` ${textColor} font-bold text-xl md:text-3xl text-center`}>
     {title}
   </h4>
-  <p class="text-slate-500 font-semibold text-xs md:text-sm">{desc}</p>
+  <p class="text-slate-500 font-semibold text-tiny md:text-xs text-center">
+    {desc}
+  </p>
 </div>

@@ -1,0 +1,121 @@
+---
+import { useTranslations, getLangFromUrl } from "@i18n/utils"
+import AdmissionContentWrapper from "../AdmissionContentWrapper.astro"
+import AdmissionSectionWrapper from "../AdmissionSectionWrapper.astro"
+import AdmissionSectionDescription from "../AdmissionSectionDescription.astro"
+import AdmissionSectionTitle from "../AdmissionSectionTitle.astro"
+import ProcessStep from "./ProcessStep.astro"
+import ProcessBlock from "./ProcessBlock.astro"
+import ProcessDescription from "./ProcessDescription.astro"
+import type { bgColor50, bgLineColor } from "@utils/commonTypes"
+import { FolderArchive } from "@lucide/astro"
+import ProcessDocumentItem from "./ProcessDocumentItem.astro"
+
+const t = useTranslations(getLangFromUrl(Astro.url))
+const bgVariant: bgColor50 = "bg-white"
+const bgLineColor: bgLineColor = "bg-slate-200"
+---
+
+<AdmissionSectionWrapper id={"AdmissionProcess"} bgVariant={bgVariant}>
+  <AdmissionContentWrapper slot="admission-content">
+    <AdmissionSectionTitle title={t("Admission.Process.Title")} />
+    <AdmissionSectionDescription
+      description={t("Admission.Process.Description")}
+    />
+    <div id="process-steps" class="grid grid-cols-1 md:grid-cols-5 w-full">
+      <ProcessBlock>
+        <ProcessStep
+          serial={"1"}
+          bgVariant="bg-slate-300"
+          textVariant="text-slate-800"
+          showColor={bgLineColor}
+          hideColor={bgVariant}
+          first
+        />
+        <ProcessDescription
+          title={t("Admission.Process.Step1.Title")}
+          description={t("Admission.Process.Step1.Description")}
+          titleVariant="text-slate-800"
+        />
+      </ProcessBlock>
+      <ProcessBlock>
+        <ProcessStep
+          serial={"2"}
+          bgVariant="bg-yellow-300"
+          textVariant="text-yellow-800"
+          showColor={bgLineColor}
+        />
+        <ProcessDescription
+          title={t("Admission.Process.Step2.Title")}
+          description={t("Admission.Process.Step2.Description")}
+          titleVariant="text-yellow-800"
+        />
+      </ProcessBlock>
+      <ProcessBlock>
+        <ProcessStep
+          serial={"3"}
+          bgVariant="bg-cyan-300"
+          textVariant="text-cyan-800"
+          showColor={bgLineColor}
+        />
+        <ProcessDescription
+          title={t("Admission.Process.Step3.Title")}
+          description={t("Admission.Process.Step3.Description")}
+          titleVariant="text-cyan-800"
+        />
+      </ProcessBlock>
+      <ProcessBlock>
+        <ProcessStep
+          serial={"4"}
+          bgVariant="bg-pink-300"
+          textVariant="text-pink-800"
+          showColor={bgLineColor}
+        />
+        <ProcessDescription
+          title={t("Admission.Process.Step4.Title")}
+          description={t("Admission.Process.Step4.Description")}
+          titleVariant="text-pink-800"
+        />
+      </ProcessBlock>
+      <ProcessBlock>
+        <ProcessStep
+          serial={"5"}
+          bgVariant="bg-lime-300"
+          textVariant="text-lime-800"
+          showColor={bgLineColor}
+          hideColor={bgVariant}
+          last
+        />
+        <ProcessDescription
+          title={t("Admission.Process.Step5.Title")}
+          description={t("Admission.Process.Step5.Description")}
+          titleVariant="text-lime-800"
+        />
+      </ProcessBlock>
+    </div>
+    <div
+      id="process-documents"
+      class="w-full flex flex-col md:flex-row bg-slate-50 border border-dashed border-pink-200 gap-4 md:gap-6 p-6 md:p-8 rounded-2xl md:w-4/5 shadow"
+    >
+      <div class="flex flex-col gap-2 md:gap-3">
+        <div
+          class="flex items-center justify-center rounded-full size-10 md:size-12 bg-pink-200 text-pink-800"
+        >
+          <FolderArchive class="size-5 md:size-6" />
+        </div>
+        <h5 class="text-lg md:text-xl font-bold text-pink-800">
+          {t("Admission.Process.Documents.Title")}
+        </h5>
+        <p class="text-sm md:text-base text-slate-600">
+          {t("Admission.Process.Documents.Subtitle")}
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:w-full">
+        <ProcessDocumentItem title={t("Admission.Process.Documents.List1")} />
+        <ProcessDocumentItem title={t("Admission.Process.Documents.List2")} />
+        <ProcessDocumentItem title={t("Admission.Process.Documents.List3")} />
+        <ProcessDocumentItem title={t("Admission.Process.Documents.List4")} />
+      </div>
+    </div>
+  </AdmissionContentWrapper>
+</AdmissionSectionWrapper>

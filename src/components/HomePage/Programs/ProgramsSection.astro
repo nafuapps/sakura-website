@@ -6,15 +6,15 @@ import ProgramItem from "./ProgramItem.astro"
 import HomeSectionWrapper from "../HomeSectionWrapper.astro"
 import HomeContentWrapper from "../HomeContentWrapper.astro"
 import { getLangFromUrl, useTranslatedPath, useTranslations } from "@i18n/utils"
-import SectionDescription from "../SectionDescription.astro"
-import SectionTitle from "../SectionTitle.astro"
+import SectionDescription from "../HomeSectionDescription.astro"
+import SectionTitle from "../HomeSectionTitle.astro"
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 const translatePath = useTranslatedPath(lang)
 ---
 
 <HomeSectionWrapper id="programs" bgVariant="bg-pink-50">
-  <HomeContentWrapper slot="content">
+  <HomeContentWrapper slot="home-content">
     <SectionTitle title={t("Home.Programs.Title")} />
     <SectionDescription description={t("Home.Programs.Description")} />
     <div

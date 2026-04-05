@@ -9,14 +9,14 @@ import gallery6 from "@assets/gallery6.jpg"
 
 import HomeContentWrapper from "../HomeContentWrapper.astro"
 import HomeSectionWrapper from "../HomeSectionWrapper.astro"
-import SectionDescription from "../SectionDescription.astro"
-import SectionTitle from "../SectionTitle.astro"
+import SectionDescription from "../HomeSectionDescription.astro"
+import SectionTitle from "../HomeSectionTitle.astro"
 import { getLangFromUrl, useTranslations } from "@i18n/utils"
 const t = useTranslations(getLangFromUrl(Astro.url))
 ---
 
 <HomeSectionWrapper id="gallery" bgVariant="bg-white">
-  <HomeContentWrapper slot="content">
+  <HomeContentWrapper slot="home-content">
     <SectionTitle title={t("Home.Gallery.Title")} />
     <SectionDescription description={t("Home.Gallery.Description")} />
     <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">

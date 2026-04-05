@@ -1,0 +1,16 @@
+---
+interface Props {
+  largeDirection?:
+    | "md:flex-row"
+    | "md:flex-row-reverse"
+    | "md:flex-col"
+    | "md:flex-col-reverse"
+}
+const { largeDirection = "md:flex-col" } = Astro.props
+---
+
+<div
+  class={`w-full max-w-7xl h-full flex flex-col ${largeDirection} gap-6 md:gap-8 items-center justify-center`}
+>
+  <slot />
+</div>

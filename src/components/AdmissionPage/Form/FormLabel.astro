@@ -1,0 +1,12 @@
+---
+interface Props {
+  id: string
+  title: string
+}
+const { id, title } = Astro.props
+---
+
+<label for={id} class="text-tiny md:text-xs font-bold text-slate-800">
+  {title}
+</label>
+

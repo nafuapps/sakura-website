@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets"
+import AdmissionContentWrapper from "../AdmissionContentWrapper.astro"
+import AdmissionSectionWrapper from "../AdmissionSectionWrapper.astro"
+import { MapPinHouse } from "@lucide/astro"
+import admissionCoverImage from "@assets/admissionCoverImage.png"
+import { useTranslations, getLangFromUrl } from "@i18n/utils"
+import AdmissionMarketingCard from "./AdmissionMarketingCard.astro"
+
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<AdmissionSectionWrapper id={"AdmissionHero"} bgVariant="bg-cyan-50">
+  <AdmissionContentWrapper
+    slot="admission-content"
+    largeDirection="md:flex-col"
+  >
+    <AdmissionMarketingCard />
+    <div
+      class="w-full flex-col md:flex-row gap-6 md:gap-8 items-center justify-center flex"
+    >
+      <div
+        id="hero-left"
+        class="flex flex-col gap-4 md:gap-5 w-full md:w-1/2 items-center text-center md:text-start md:items-start"
+      >
+        <div
+          class="flex gap-2 items-center rounded-full text-xs px-4 py-1.5 bg-yellow-400 font-semibold text-yellow-950 rotate-2"
+        >
+          <MapPinHouse class="size-4 text-yellow-950" />
+          {t("Admission.Hero.Tagline")}
+        </div>
+        <h1 class="text-4xl md:text-6xl leading-tight font-black text-cyan-800">
+          {t("Admission.Hero.Title")}
+          <span class="text-pink-800">{t("Admission.Hero.Title.Inner")}</span>
+        </h1>
+        <p class="text-base md:text-xl text-slate-800">
+          {t("Admission.Hero.Subtitle")}
+        </p>
+      </div>
+      <div
+        id="hero-right"
+        class="flex flex-col gap-4 md:gap-6 w-full md:w-1/2 items-center md:items-end"
+      >
+        <Image
+          src={admissionCoverImage}
+          alt="Hero Image"
+          class="rounded-lg h-72 w-full md:h-96 object-cover -rotate-2 shadow-2xl"
+        />
+      </div>
+    </div>
+  </AdmissionContentWrapper>
+</AdmissionSectionWrapper>

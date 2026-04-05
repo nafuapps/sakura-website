@@ -1,0 +1,15 @@
+---
+import { CircleCheckBig } from "@lucide/astro"
+
+interface Props {
+  title: string
+}
+const { title } = Astro.props
+---
+
+<div
+  class="flex flex-row bg-white items-center gap-2 md:gap-3 px-3 md:px-5 py-2 rounded-full md:w-full"
+>
+  <CircleCheckBig class="size-4 md:size-5 text-pink-800 shrink-0" />
+  <p class="text-tiny md:text-xs text-slate-800">{title}</p>
+</div>

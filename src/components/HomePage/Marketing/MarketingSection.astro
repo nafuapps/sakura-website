@@ -1,15 +1,15 @@
 ---
 import HomeContentWrapper from "../HomeContentWrapper.astro"
 import HomeSectionWrapper from "../HomeSectionWrapper.astro"
-import MarketingCard from "./MarketingCard.astro"
+import HomeMarketingCard from "./HomeMarketingCard.astro"
 
 import { getLangFromUrl, useTranslations } from "@i18n/utils"
 const t = useTranslations(getLangFromUrl(Astro.url))
 ---
 
 <HomeSectionWrapper id="programs" bgVariant="bg-pink-50" minHScreen={false}>
-  <HomeContentWrapper slot="content">
-    <MarketingCard
+  <HomeContentWrapper slot="home-content">
+    <HomeMarketingCard
       title={t("Home.Marketing.Title")}
       desc={t("Home.Marketing.Desc")}
       primaryCTA={t("Home.Marketing.PrimaryCTA")}

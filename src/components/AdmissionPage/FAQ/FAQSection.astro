@@ -1,0 +1,41 @@
+---
+import AdmissionContentWrapper from "../AdmissionContentWrapper.astro"
+import AdmissionSectionDescription from "../AdmissionSectionDescription.astro"
+import AdmissionSectionTitle from "../AdmissionSectionTitle.astro"
+import AdmissionSectionWrapper from "../AdmissionSectionWrapper.astro"
+import FAQItem from "./FAQItem.astro"
+import { useTranslations, getLangFromUrl } from "@i18n/utils"
+
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<AdmissionSectionWrapper id={"FAQ"} bgVariant="bg-white">
+  <AdmissionContentWrapper slot="admission-content">
+    <AdmissionSectionTitle title={t("Admission.FAQ.Title")} />
+    <AdmissionSectionDescription description={t("Admission.FAQ.Description")} />
+    <FAQItem
+      question={t("Admission.FAQ.Question1")}
+      answer={t("Admission.FAQ.Answer1")}
+    />
+    <FAQItem
+      question={t("Admission.FAQ.Question2")}
+      answer={t("Admission.FAQ.Answer2")}
+    />
+    <FAQItem
+      question={t("Admission.FAQ.Question3")}
+      answer={t("Admission.FAQ.Answer3")}
+    />
+    <FAQItem
+      question={t("Admission.FAQ.Question4")}
+      answer={t("Admission.FAQ.Answer4")}
+    />
+    <FAQItem
+      question={t("Admission.FAQ.Question5")}
+      answer={t("Admission.FAQ.Answer5")}
+    />
+    <FAQItem
+      question={t("Admission.FAQ.Question6")}
+      answer={t("Admission.FAQ.Answer6")}
+    />
+  </AdmissionContentWrapper>
+</AdmissionSectionWrapper>

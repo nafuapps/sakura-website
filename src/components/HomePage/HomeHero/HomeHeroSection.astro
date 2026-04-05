@@ -2,10 +2,10 @@
 import { Image } from "astro:assets"
 import heroIcon1 from "@assets/heroIcon1.png"
 import heroIcon2 from "@assets/heroIcon2.png"
-import coverImage from "@assets/coverImage1.png"
+import homeCoverImage from "@assets/homeCoverImage.png"
 import { GraduationCap } from "@lucide/astro"
-import HeroPrimaryButton from "./HeroPrimaryButton.astro"
-import HeroSecondaryButton from "./HeroSecondaryButton.astro"
+import HomeHeroPrimaryButton from "./HomeHeroPrimaryButton.astro"
+import HomeHeroSecondaryButton from "./HomeHeroSecondaryButton.astro"
 import HomeContentWrapper from "../HomeContentWrapper.astro"
 import HomeSectionWrapper from "../HomeSectionWrapper.astro"
 import { getLangFromUrl, useTranslations } from "@i18n/utils"
@@ -14,7 +14,7 @@ const t = useTranslations(getLangFromUrl(Astro.url))
 ---
 
 <HomeSectionWrapper id="hero" bgVariant="bg-pink-50">
-  <HomeContentWrapper slot="content" largeDirection="md:flex-row">
+  <HomeContentWrapper slot="home-content" largeDirection="md:flex-row">
     <div
       id="hero-left"
       class="flex flex-col gap-4 md:gap-5 w-full md:w-1/2 items-start"
@@ -30,7 +30,7 @@ const t = useTranslations(getLangFromUrl(Astro.url))
         <GraduationCap class="size-4 text-yellow-950" />
         {t("Home.Hero.Tagline")}
       </div>
-      <h1 class="text-4xl md:text-6xl leading-tight font-bold text-pink-800">
+      <h1 class="text-4xl md:text-6xl leading-tight font-black text-pink-800">
         {t("Home.Hero.Title")}
         <span class="text-cyan-800">{t("Home.Hero.Title.Inner")}</span>
       </h1>
@@ -38,8 +38,8 @@ const t = useTranslations(getLangFromUrl(Astro.url))
         {t("Home.Hero.Subtitle")}
       </p>
       <div class="flex flex-row gap-4">
-        <HeroPrimaryButton />
-        <HeroSecondaryButton />
+        <HomeHeroPrimaryButton />
+        <HomeHeroSecondaryButton />
       </div>
     </div>
     <div
@@ -52,7 +52,7 @@ const t = useTranslations(getLangFromUrl(Astro.url))
         class="hidden md:flex size-12 opacity-20 relative right-16 -top-20"
       />
       <Image
-        src={coverImage}
+        src={homeCoverImage}
         alt="Hero Image"
         class="rounded-lg h-72 w-full md:h-96 object-cover rotate-2 shadow-2xl"
       />

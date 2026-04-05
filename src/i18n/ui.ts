@@ -48,7 +48,7 @@ export const ui = {
       "We strive to be a trusted partner to parents, offering a safe, inclusive space where every child learns, grows with peers, and develops into a confident, caring, and empathetic individual.",
     "Home.Mission.Point1.Title": "Experienced Educators",
     "Home.Mission.Point2.Title": "Play-Based Learning",
-    "Home.Mission.Point3.Title": "Safe and Inclusive Environment",
+    "Home.Mission.Point3.Title": "Local Culture Inclusive",
     "Home.Mission.Point4.Title": "Community Engagement",
     "Home.Metrics.Title": "Success Factors",
     "Home.Metrics.Description":
@@ -59,6 +59,8 @@ export const ui = {
     "Home.Metrics.Point2.Desc": "SAFE ENVIRONMENT",
     "Home.Metrics.Point3.Title": "10:1",
     "Home.Metrics.Point3.Desc": "STUDENT-TEACHER RATIO",
+    "Home.Metrics.Point4.Title": "100%",
+    "Home.Metrics.Point4.Desc": "PARENT SATISFACTION",
     "Home.Programs.Title": "Our Programs",
     "Home.Programs.Description":
       "Explore the various programs we offer at Sakura Preschool.",
@@ -108,43 +110,65 @@ export const ui = {
     "Home.Marketing.PrimaryCTA": "Enquire Now",
     "Home.Marketing.SecondaryCTA": "Call us Today",
     //Admission Page
+    "Admission.Hero.MarketingCard.Tagline": "LIMITED TIME OFFER",
+    "Admission.Hero.MarketingCard.Title": "Open House Month!",
+    "Admission.Hero.MarketingCard.PrimaryCTA": "Book Free Trial Class",
+    "Admission.Hero.MarketingCard.Subtitle":
+      "Join us for free trial classes till 30th April. Experience the Sakura Preschool magic firsthand.",
     "Admission.Hero.Tagline": "Embracing local culture",
-    "Admission.Hero.Title": "Join the Sakura Family",
+    "Admission.Hero.Title": "Start Your Child's",
+    "Admission.Hero.Title.Inner": "Blossoming Journey",
     "Admission.Hero.Subtitle":
-      "Give your child the best start in life for a bright future",
+      "At Sakura Preschool, we provide a home-like environment to give your child the best start in life for a bright future",
     "Admission.Process.Title": "Admission Process",
     "Admission.Process.Description":
-      "Easy and straightforward enrollment process",
-    "Admission.Process.Step1.Title": "Step 1: Contact us",
+      "Follow this simple five step process to join our nurturing community",
+    "Admission.Process.Step1.Title": "Contact Us",
     "Admission.Process.Step1.Description":
-      "Reach out to us via phone, email, or our online enquiry form to express your interest and ask any questions you may have.",
-    "Admission.Process.Step2.Title": "Step 2: Schedule a visit",
+      "Reach out to us via phone, email, or online enquiry form below to express your interest.",
+    "Admission.Process.Step2.Title": "School Tour",
     "Admission.Process.Step2.Description":
       "We encourage you to visit our preschool to experience our nurturing environment and meet our dedicated team.",
-    "Admission.Process.Step3.Title": "Step 3: Submit Application",
+    "Admission.Process.Step3.Title": "Interaction",
     "Admission.Process.Step3.Description":
-      "Fill in and submit your application form along with the required documents.",
-    "Admission.Process.Documents.Title": "Required Documents:",
+      "A friendly, informal meet-and-greet with our school head to understand your child's needs and our curriculum better.",
+    "Admission.Process.Step4.Title": "Registration",
+    "Admission.Process.Step4.Description":
+      "Complete quick paperwork and submit required documents for enrollment.",
+    "Admission.Process.Step5.Title": "Welcome!",
+    "Admission.Process.Step5.Description":
+      "Get ready for an exciting journey of learning and growth at Sakura Preschool.",
+    "Admission.Process.Documents.Title": "Required Documents",
+    "Admission.Process.Documents.Subtitle":
+      "Please keep digital or physical copies ready for the enrollment process",
     "Admission.Process.Documents.List1": "Birth certificate",
     "Admission.Process.Documents.List2": "Vaccination record",
-    "Admission.Process.Documents.List3":
-      "Parent's identification (Aadhaar Card, Passport, etc.)",
-    "Admission.Process.Documents.List4": "Address proof",
-    "Admission.Process.Documents.List5": "Child's recent photograph (2)",
-    "Admission.Process.Enrollment.Title": "Enrollment for 2026-27 is now open!",
-    "Admission.Process.Enrollment.DownloadCTA": "Download Application Form",
-    "Admission.Form.Title": "Enquiry Form",
-    "Admission.Form.Description":
+    "Admission.Process.Documents.List3": "Parent's ID Proof",
+    "Admission.Process.Documents.List4": "Child's photo (2)",
+    "Admission.Form.Enrollment.Title": "Inquire about Enrollment",
+    "Admission.Form.Enrollment.Subtitle":
+      "Have questions or ready to schedule a visit? Fill out this online form and we will reach out within 24 hours.",
+    "Admission.Form.Enrollment.Phone": "PHONE",
+    "Admission.Form.Enrollment.Email": "EMAIL",
+    "Admission.Form.Enrollment.DownloadCTA": "Download Application Form",
+    "Admission.Form.Form.Description":
       "Get in touch for admission enquiry or any other questions to schedule a visit",
-    "Admission.Form.Parent": "Parent's Name",
-    "Admission.Form.Child": "Child's Name",
-    "Admission.Form.Age": "Child's Age",
-    "Admission.Form.Phone": "Mobile Number",
-    "Admission.Form.Email": "Email Address (Optional)",
-    "Admission.Form.Message": "Additional Information (Optional)",
-    "Admission.Form.Submit": "Submit",
-    "Admission.Form.Loading": "Sending message...",
-    "Admission.Form.Note": "Data sent securely using Web3Forms",
+    "Admission.Form.Parent.Label": "Parent's Name",
+    "Admission.Form.Parent.Placeholder": "Sushil Kumar",
+    "Admission.Form.Child.Label": "Child's Name",
+    "Admission.Form.Child.Placeholder": "Rahul",
+    "Admission.Form.Age.Label": "Child's Age",
+    "Admission.Form.Age.Placeholder": "3",
+    "Admission.Form.Phone.Label": "Mobile Number",
+    "Admission.Form.Phone.Placeholder": "9876543210",
+    "Admission.Form.Email.Label": "Email Address (Optional)",
+    "Admission.Form.Email.Placeholder": "sushil.kumar@gmail.com",
+    "Admission.Form.Message.Label": "Additional Information (Optional)",
+    "Admission.Form.Message.Placeholder":
+      "Please provide any additional information you would like us to know.",
+    "Admission.Form.Submit": "Submit Inquiry Form",
+    "Admission.Form.Loading": "Sending Form...",
+    "Admission.Form.Note": "Data secured with Web3Forms",
     "Admission.FAQ.Title": "Frequently Asked Questions",
     "Admission.FAQ.Description":
       "Find answers to common questions about our enrollment process and programs.",
@@ -152,7 +176,7 @@ export const ui = {
     "Admission.FAQ.Answer1": "We accept children aged 2.5 to 5.5 years old.",
     "Admission.FAQ.Question2": "What documents are required for enrollment?",
     "Admission.FAQ.Answer2":
-      "You will need to provide the child's birth certificate, vaccination record, parent's identification, and address proof.",
+      "We will need the child's birth certificate, vaccination record, parent's identification, and address proof along with 2 recent photos of the child.",
     "Admission.FAQ.Question3": "What is the tuition fee for the programs?",
     "Admission.FAQ.Answer3":
       "Tuition fees vary depending on the program and duration. Please contact us for detailed information.",
@@ -162,6 +186,9 @@ export const ui = {
     "Admission.FAQ.Question5": "What are the operating hours of the preschool?",
     "Admission.FAQ.Answer5":
       "Our preschool is open from 9:00 AM to 5:00 PM, Monday through Saturday.",
+    "Admission.FAQ.Question6": "Is there daycare available at the preschool?",
+    "Admission.FAQ.Answer6":
+      "Yes, we provide professional daycare services till 5:00 PM for working parents. For more details, please contact us directly.",
   },
   //Assamese
   as: {},

@@ -1,0 +1,18 @@
+---
+import type { textColor800 } from "@utils/commonTypes"
+interface Props {
+  title: string
+  description: string
+  titleVariant: textColor800
+}
+const { title, description, titleVariant } = Astro.props
+---
+
+<div class="flex flex-col items-start md:items-center md:text-center">
+  <h6 class={`text-sm md:text-base font-semibold ${titleVariant}`}>
+    {title}
+  </h6>
+  <p class="text-xs md:text-sm text-slate-600 mb-6 md:m-4">
+    {description}
+  </p>
+</div>

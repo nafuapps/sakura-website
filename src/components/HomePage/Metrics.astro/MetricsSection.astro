@@ -1,19 +1,19 @@
 ---
-import { Star, ShieldCheck, Blocks } from "@lucide/astro"
+import { Star, ShieldCheck, Blocks, CircleCheckBig } from "@lucide/astro"
 import Metric from "./Metric.astro"
 import HomeContentWrapper from "../HomeContentWrapper.astro"
 import HomeSectionWrapper from "../HomeSectionWrapper.astro"
-import SectionTitle from "../SectionTitle.astro"
-import SectionDescription from "../SectionDescription.astro"
+import SectionTitle from "../HomeSectionTitle.astro"
+import SectionDescription from "../HomeSectionDescription.astro"
 import { getLangFromUrl, useTranslations } from "@i18n/utils"
 const t = useTranslations(getLangFromUrl(Astro.url))
 ---
 
 <HomeSectionWrapper id="metrics" bgVariant="bg-white" minHScreen={false}>
-  <HomeContentWrapper slot="content">
+  <HomeContentWrapper slot="home-content">
     <SectionTitle title={t("Home.Metrics.Title")} />
     <SectionDescription description={t("Home.Metrics.Description")} />
-    <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+    <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
       <Metric
         title={t("Home.Metrics.Point1.Title")}
         desc={t("Home.Metrics.Point1.Desc")}
@@ -34,6 +34,13 @@ const t = useTranslations(getLangFromUrl(Astro.url))
         icon={Blocks}
         bgColor="bg-yellow-100"
         textColor="text-yellow-800"
+      />
+      <Metric
+        title={t("Home.Metrics.Point4.Title")}
+        desc={t("Home.Metrics.Point4.Desc")}
+        icon={CircleCheckBig}
+        bgColor="bg-lime-100"
+        textColor="text-lime-800"
       />
     </div>
   </HomeContentWrapper>

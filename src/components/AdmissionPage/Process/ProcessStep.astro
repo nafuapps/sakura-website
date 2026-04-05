@@ -1,0 +1,52 @@
+---
+import type {
+  bgColor300,
+  bgColor50,
+  bgLineColor,
+  textColor800,
+} from "@utils/commonTypes"
+import ProcessBeforeLine from "./ProcessBeforeLine.astro"
+import ProcessAfterLine from "./ProcessAfterLine.astro"
+
+interface Props {
+  serial: string
+  bgVariant: bgColor300
+  textVariant: textColor800
+  showColor: bgLineColor
+  hideColor?: bgColor50
+  first?: boolean
+  last?: boolean
+}
+const { serial, bgVariant, textVariant, showColor, hideColor, first, last } =
+  Astro.props
+---
+
+<div
+  class="flex flex-col md:flex-row items-center h-full md:h-auto w-auto md:w-full"
+>
+  {
+    (
+      <ProcessBeforeLine
+        showColor={showColor}
+        hide={first ?? false}
+        {...(hideColor ? { hideColor } : {})}
+      />
+    )
+  }
+  <div
+    class={`${bgVariant} flex items-center justify-center rounded-lg size-10 md:size-12 shrink-0`}
+  >
+    <h5 class={`text-base md:text-lg font-semibold ${textVariant}`}>
+      {serial}
+    </h5>
+  </div>
+  {
+    (
+      <ProcessAfterLine
+        showColor={showColor}
+        hide={last ?? false}
+        {...(hideColor ? { hideColor } : {})}
+      />
+    )
+  }
+</div>
