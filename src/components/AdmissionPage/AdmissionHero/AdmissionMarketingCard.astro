@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets"
 
-import admissionMarketingIcon1 from "@assets/admissionMarketingIcon1.png"
-import admissionMarketingIcon2 from "@assets/admissionMarketingIcon2.png"
-import admissionMarketingIcon3 from "@assets/admissionMarketingIcon3.png"
+import admissionIcon1 from "@assets/admissionIcon1.png"
+import admissionIcon2 from "@assets/admissionIcon2.png"
+import admissionIcon3 from "@assets/admissionIcon3.png"
 import { AdmissionFormLink } from "@utils/commonConstants"
 import { useTranslations, getLangFromUrl } from "@i18n/utils"
 
@@ -32,17 +32,17 @@ const t = useTranslations(getLangFromUrl(Astro.url))
     {t("Admission.Hero.MarketingCard.PrimaryCTA")}
   </a>
   <Image
-    src={admissionMarketingIcon1}
+    src={admissionIcon1}
     alt="Marketing Icon 1"
     class="h-8 md:h-12 w-auto absolute top-2 md:top-3 right-4 md:right-6"
   />
   <Image
-    src={admissionMarketingIcon2}
+    src={admissionIcon2}
     alt="Marketing Icon 2"
     class="h-10 md:h-16 w-auto absolute bottom-2 md:bottom-3 -left-1 md:-left-2"
   />
   <Image
-    src={admissionMarketingIcon3}
+    src={admissionIcon3}
     alt="Marketing Icon 3"
     class="h-10 md:h-16 w-auto absolute top-3 md:top-4 left-40 md:left-80"
   />
