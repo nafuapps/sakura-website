@@ -189,6 +189,10 @@ export const ui = {
     "Admission.FAQ.Question6": "Is there daycare available at the preschool?",
     "Admission.FAQ.Answer6":
       "Yes, we provide professional daycare services till 5:00 PM for working parents. For more details, please contact us directly.",
+    //Curriculum Page
+    "Curriculum.Hero.Tagline": "Our Curriculum",
+    "Curriculum.Hero.Title": "A Holistic Approach to Early Childhood Education",
+    "Curriculum.Hero.Subtitle": "",
   },
   //Assamese
   as: {},

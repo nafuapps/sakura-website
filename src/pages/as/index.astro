@@ -1,14 +1,24 @@
 ---
 import Layout from "../../layouts/Layout.astro"
-import Cover from "../../assets/coverImage.png"
+import HomeHeroSection from "@components/HomePage/HomeHero/HomeHeroSection.astro"
+import MetricsSection from "@components/HomePage/Metrics.astro/MetricsSection.astro"
+import ProgramsSection from "@components/HomePage/Programs/ProgramsSection.astro"
+import WhySection from "@components/HomePage/Why/WhySection.astro"
+import MissionSection from "@components/HomePage/Mission/MissionSection.astro"
+import MarketingSection from "@components/HomePage/Marketing/MarketingSection.astro"
+import GallerySection from "@components/HomePage/Gallery/GallerySection.astro"
 ---
 
-<Layout title="Sakura Preschool - Home" description="" currentTab="home">
-  <div
-    class="bg-cover h-screen bg-center"
-    style={`background-image: url(${Cover.src})`}
-  >
-  </div>
-  <div class="h-screen"></div>
-  <div class="h-screen"></div>
+<Layout
+  title="Sakura Preschool - Home"
+  description="Home page for Sakura Preschool in Kokrajhar - the best preschool in Northeast India"
+  currentTab="home"
+>
+  <HomeHeroSection />
+  <WhySection />
+  <MissionSection />
+  <MetricsSection />
+  <ProgramsSection />
+  <GallerySection />
+  <MarketingSection />
 </Layout>

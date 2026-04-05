@@ -1,11 +1,18 @@
 ---
+import FAQSection from "@components/AdmissionPage/FAQ/FAQSection.astro"
+import FormSection from "@components/AdmissionPage/Form/FormSection.astro"
+import AdmissionHeroSection from "@components/AdmissionPage/AdmissionHero/AdmissionHeroSection.astro"
+import ProcessSection from "@components/AdmissionPage/Process/ProcessSection.astro"
 import Layout from "../../layouts/Layout.astro"
 ---
 
 <Layout
   title="Sakura Preschool - Admission"
-  description=""
+  description="Admission page for Sakura Preschool in Kokrajhar - Find all admission related details here"
   currentTab="admission"
 >
-  <div></div>
+  <AdmissionHeroSection />
+  <ProcessSection />
+  <FormSection />
+  <FAQSection />
 </Layout>
