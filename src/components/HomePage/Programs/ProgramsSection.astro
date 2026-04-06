@@ -2,6 +2,7 @@
 import program1 from "@assets/program1.jpg"
 import program2 from "@assets/program2.jpg"
 import program3 from "@assets/program3.jpg"
+import program4 from "@assets/program4.png"
 import ProgramItem from "./ProgramItem.astro"
 import HomeSectionWrapper from "../HomeSectionWrapper.astro"
 import HomeContentWrapper from "../HomeContentWrapper.astro"
@@ -19,7 +20,7 @@ const translatePath = useTranslatedPath(lang)
     <SectionDescription description={t("Home.Programs.Description")} />
     <div
       id="programs-list"
-      class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+      class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8"
     >
       <ProgramItem
         imageSrc={program1}
@@ -53,6 +54,18 @@ const translatePath = useTranslatedPath(lang)
         tag={t("Home.Programs.Program3.Tag")}
         bgColor="bg-yellow-300"
         textColor="text-yellow-700"
+      />
+      <ProgramItem
+        imageSrc={program4}
+        title={t("Home.Programs.Program4.Title")}
+        subtitle={t("Home.Programs.Program4.Subtitle")}
+        description={t("Home.Programs.Program4.Description")}
+        href="/curriculum#daycare"
+        cta={t("Home.ProgramItem.LearnMore")}
+        tag={t("Home.Programs.Program4.Tag")}
+        bgColor="bg-pink-300"
+        textColor="text-pink-700"
+        special
       />
     </div>
   </HomeContentWrapper>

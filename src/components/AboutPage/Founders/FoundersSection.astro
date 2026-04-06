@@ -1,0 +1,63 @@
+---
+import founder1 from "@assets/founder1.png"
+import founder2 from "@assets/founder2.png"
+import FounderItem from "./FounderItem.astro"
+import AboutSectionWrapper from "../AboutSectionWrapper.astro"
+import AboutContentWrapper from "../AboutContentWrapper.astro"
+import { getLangFromUrl, useTranslations } from "@i18n/utils"
+import SectionDescription from "../AboutSectionDescription.astro"
+import SectionTitle from "../AboutSectionTitle.astro"
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+---
+
+<AboutSectionWrapper id="founders" bgVariant="bg-slate-50">
+  <AboutContentWrapper slot="about-content">
+    <SectionTitle title={t("About.Founders.Title")} />
+    <SectionDescription description={t("About.Founders.Description")} />
+    <div
+      id="founders-list"
+      class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+    >
+      <FounderItem
+        imageSrc={founder1}
+        title={t("About.Founders.founder1.Title")}
+        subtitle={t("About.Founders.founder1.Subtitle")}
+        description={t("About.Founders.founder1.Description")}
+        phone={t("About.Founders.founder1.Phone")}
+        email={t("About.Founders.founder1.Email")}
+        linkedIn={t("About.Founders.founder1.LinkedIn")}
+        educations={[
+          t("About.Founders.founder1.Education1"),
+          t("About.Founders.founder1.Education2"),
+        ]}
+      />
+      <FounderItem
+        imageSrc={founder2}
+        title={t("About.Founders.founder2.Title")}
+        subtitle={t("About.Founders.founder2.Subtitle")}
+        description={t("About.Founders.founder2.Description")}
+        phone={t("About.Founders.founder2.Phone")}
+        email={t("About.Founders.founder2.Email")}
+        linkedIn={t("About.Founders.founder2.LinkedIn")}
+        educations={[
+          t("About.Founders.founder2.Education1"),
+          t("About.Founders.founder2.Education2"),
+        ]}
+      />
+      <!-- <FounderItem
+        imageSrc={founder2}
+        title={t("About.Founders.founder2.Title")}
+        subtitle={t("About.Founders.founder2.Subtitle")}
+        description={t("About.Founders.founder2.Description")}
+        phone={t("About.Founders.founder2.Phone")}
+        email={t("About.Founders.founder2.Email")}
+        linkedIn={t("About.Founders.founder2.LinkedIn")}
+        educations={[
+          t("About.Founders.founder2.Education1"),
+          t("About.Founders.founder2.Education2"),
+        ]}
+      /> -->
+    </div>
+  </AboutContentWrapper>
+</AboutSectionWrapper>

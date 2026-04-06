@@ -1,0 +1,19 @@
+---
+import AboutContentWrapper from "../AboutContentWrapper.astro"
+import AboutSectionWrapper from "../AboutSectionWrapper.astro"
+import AboutMarketingCard from "./AboutMarketingCard.astro"
+
+import { getLangFromUrl, useTranslations } from "@i18n/utils"
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<AboutSectionWrapper id="programs" bgVariant="bg-white" minHScreen={false}>
+  <AboutContentWrapper slot="about-content">
+    <AboutMarketingCard
+      title={t("About.Marketing.Title")}
+      desc={t("About.Marketing.Subtitle")}
+      primaryCTA={t("About.Marketing.Primary")}
+      secondaryCTA={t("About.Marketing.Secondary")}
+    />
+  </AboutContentWrapper>
+</AboutSectionWrapper>

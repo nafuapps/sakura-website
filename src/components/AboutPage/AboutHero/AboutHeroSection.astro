@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets"
+import { BookHeart } from "@lucide/astro"
+import AboutCoverImage from "@assets/aboutCoverImage.jpg"
+import AboutContentWrapper from "../AboutContentWrapper.astro"
+import AboutSectionWrapper from "../AboutSectionWrapper.astro"
+import { useTranslations, getLangFromUrl } from "@i18n/utils"
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<AboutSectionWrapper id="AboutHero" bgVariant="bg-yellow-50" minHScreen>
+  <AboutContentWrapper slot="about-content" largeDirection="md:flex-row">
+    <div
+      id="hero-left"
+      class="flex flex-col gap-4 md:gap-5 w-full md:w-1/2 items-center text-center md:text-start md:items-start"
+    >
+      <div
+        class="flex gap-2 items-center rounded-full text-xs px-4 py-1.5 bg-yellow-400 font-semibold text-yellow-950 rotate-2"
+      >
+        <BookHeart class="size-4 text-yellow-950" />
+        {t("About.Hero.Tagline")}
+      </div>
+      <h1 class="text-4xl md:text-6xl leading-tight font-black text-pink-800">
+        {t("About.Hero.Title")}
+        <span class="text-cyan-800">{t("About.Hero.Title.Inner")}</span>
+      </h1>
+      <p class="text-base md:text-xl text-slate-800">
+        {t("About.Hero.Subtitle")}
+      </p>
+    </div>
+    <div
+      id="hero-right"
+      class="flex flex-col gap-4 md:gap-6 w-full md:w-1/2 items-center md:items-end"
+    >
+      <Image
+        src={AboutCoverImage}
+        alt="Hero Image"
+        class="rounded-2xl h-72 w-full md:h-96 object-cover -rotate-2 shadow-2xl"
+      />
+    </div>
+  </AboutContentWrapper>
+</AboutSectionWrapper>

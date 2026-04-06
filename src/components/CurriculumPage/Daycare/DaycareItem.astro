@@ -1,0 +1,17 @@
+---
+import { Check } from "@lucide/astro"
+
+interface Props {
+  title: string
+}
+const { title } = Astro.props as Props
+---
+
+<div class="flex flex-row gap-2.5 md:gap-3 items-center">
+  <div
+    class="bg-cyan-200 rounded-full size-8 md:size-10 flex items-center justify-center"
+  >
+    <Check class="text-cyan-800 size-4 md:size-5" />
+  </div>
+  <p class="text-xs md:text-sm text-slate-600 font-semibold">{title}</p>
+</div>

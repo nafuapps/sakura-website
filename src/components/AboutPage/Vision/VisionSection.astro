@@ -1,0 +1,54 @@
+---
+import AboutContentWrapper from "../AboutContentWrapper.astro"
+import AboutSectionWrapper from "../AboutSectionWrapper.astro"
+import { useTranslations, getLangFromUrl } from "@i18n/utils"
+import VisionBlock from "./VisionBlock.astro"
+import { Heart, Leaf, BrainCog, Palette } from "@lucide/astro"
+const t = useTranslations(getLangFromUrl(Astro.url))
+---
+
+<AboutSectionWrapper id="Vision" bgVariant="bg-yellow-50">
+  <AboutContentWrapper slot="about-content">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <div
+        class="flex flex-col md:col-span-2 rounded-2xl gap-3 md:gap-4 p-6 md:p-8 bg-pink-800"
+      >
+        <h4 class="text-xl md:text-3xl font-bold text-white">
+          {t("About.Vision.Main.Title")}
+        </h4>
+        <p class="text-sm md:text-base text-pink-100">
+          {t("About.Vision.Main.Subtitle")}
+        </p>
+      </div>
+      <div
+        class="flex flex-col rounded-2xl gap-3 md:gap-4 p-6 md:p-8 bg-lime-200"
+      >
+        <Leaf class="text-lime-800 size-14 md:size-16" />
+        <p class="text-base md:text-lg text-slate-600">
+          {t("About.Vision.Organic")}
+        </p>
+      </div>
+      <VisionBlock
+        icon={Heart}
+        title={t("About.Vision.Vision1.Title")}
+        subtitle={t("About.Vision.Vision1.Subtitle")}
+        textColor="text-cyan-800"
+        bgColor="bg-cyan-300"
+      />
+      <VisionBlock
+        icon={Palette}
+        title={t("About.Vision.Vision2.Title")}
+        subtitle={t("About.Vision.Vision2.Subtitle")}
+        textColor="text-pink-800"
+        bgColor="bg-pink-300"
+      />
+      <VisionBlock
+        icon={BrainCog}
+        title={t("About.Vision.Vision3.Title")}
+        subtitle={t("About.Vision.Vision3.Subtitle")}
+        textColor="text-yellow-800"
+        bgColor="bg-yellow-300"
+      />
+    </div>
+  </AboutContentWrapper>
+</AboutSectionWrapper>

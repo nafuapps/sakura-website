@@ -14,9 +14,9 @@ const { icon: Icon, title, subtitle, textColor, bgColor } = Astro.props as Props
 
 <div class="flex flex-col rounded-2xl gap-3 md:gap-4 p-6 md:p-8 bg-slate-50">
   <div
-    class={`${bgColor} p-4 rounded-lg size-12 md:size-16 flex items-center justify-center`}
+    class={`${bgColor} rounded-lg size-12 md:size-16 flex items-center justify-center`}
   >
-    <Icon class={`${textColor} size-9 md:size-10`} />
+    <Icon class={`${textColor} size-8 md:size-9`} />
   </div>
   <h4 class={`${textColor} text-lg md:text-2xl font-bold`}>{title}</h4>
   <p class="text-xs md:text-sm text-slate-600">{subtitle}</p>

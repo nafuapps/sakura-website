@@ -1,0 +1,64 @@
+---
+import { Mail, Phone, SquareArrowOutUpRight } from "@lucide/astro"
+import { Image } from "astro:assets"
+import EducationItem from "./EducationItem.astro"
+
+interface Props {
+  imageSrc: ImageMetadata
+  title: string
+  subtitle: string
+  description: string
+  phone: string
+  email: string
+  linkedIn: string
+  educations: string[]
+}
+const {
+  imageSrc,
+  title,
+  subtitle,
+  description,
+  phone,
+  email,
+  linkedIn,
+  educations,
+} = Astro.props
+---
+
+<div
+  class="flex flex-col bg-white items-center text-center gap-2 md:gap-3 p-5 md:p-6 shadow rounded-2xl"
+>
+  <Image
+    src={imageSrc}
+    alt={title}
+    class="w-2/3 object-cover rounded-full aspect-square"
+  />
+  <h5 class="text-xl md:text-2xl font-semibold text-pink-800">
+    {title}
+  </h5>
+  <p class="text-cyan-800 text-sm md:text-base font-semibold">{subtitle}</p>
+  <p class="text-xs md:text-sm text-slate-600">
+    {description}
+  </p>
+  <div class={`flex items-center flex-row gap-1.5 md:gap-2`}>
+    {educations.map((t) => <EducationItem title={t} />)}
+  </div>
+  <div class={`mt-auto flex items-center flex-row gap-2 md:gap-3`}>
+    <a
+      href={phone}
+      class="flex items-center justify-center bg-yellow-800 size-9 md:size-10 rounded-full hover:bg-yellow-900 hover:cursor-pointer"
+      ><Phone class="text-yellow-50 size-5" />
+    </a>
+    <a
+      href={email}
+      class="flex items-center justify-center bg-yellow-800 size-9 md:size-10 rounded-full hover:bg-yellow-900 hover:cursor-pointer"
+      ><Mail class="text-yellow-50 size-5" />
+    </a>
+    <a
+      href={linkedIn}
+      target="_blank"
+      class="flex items-center justify-center bg-yellow-800 size-9 md:size-10 rounded-full hover:bg-yellow-900 hover:cursor-pointer"
+      ><SquareArrowOutUpRight class="text-yellow-50 size-5" />
+    </a>
+  </div>
+</div>

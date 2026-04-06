@@ -13,6 +13,7 @@ interface Props {
   href: string
   bgColor: bgColor300
   textColor: textColor700
+  special?: boolean
 }
 const {
   imageSrc,
@@ -24,6 +25,7 @@ const {
   cta,
   bgColor,
   textColor,
+  special = false,
 } = Astro.props
 ---
 
@@ -39,23 +41,27 @@ const {
     class="w-full h-48 object-cover rounded-t-2xl"
   />
   <div
-    class="bg-white w-full p-4 md:p-6 flex flex-col items-start gap-3 md:gap-4 rounded-b-2xl"
+    class={`${special ? "bg-pink-800" : "bg-white"} w-full p-4 md:p-6 flex flex-col items-start gap-3 md:gap-4 rounded-b-2xl`}
   >
     <div
       class={`flex items-center justify-center w-auto ${bgColor} rounded-full px-2 py-1 md:px-3 md:py-1.5`}
     >
       <p class="text-slate-800 text-tiny md:text-xs">{subtitle}</p>
     </div>
-    <h5 class={`text-base md:text-lg font-semibold ${textColor} `}>
+    <h5
+      class={`text-base md:text-lg font-semibold ${special ? "text-white" : textColor} `}
+    >
       {title}
     </h5>
-    <p class="text-xs md:text-sm text-slate-500">
+    <p
+      class={`text-xs md:text-sm ${special ? "text-slate-200" : "text-slate-500"}`}
+    >
       {description}
     </p>
     <a
       href={href}
-      class="flex items-center text-xs md:text-sm text-pink-800 hover:text-pink-900 hover:underline hover:cursor-pointer"
-      >{cta} <ChevronRight class="text-pink-800 size-3 md:size-3.5" />
+      class={`mt-auto flex items-center text-xs md:text-sm ${special ? "text-pink-50 hover:text-pink-200" : "text-pink-800 hover:text-pink-900"} hover:underline hover:cursor-pointer`}
+      >{cta} <ChevronRight class="size-3 md:size-3.5" />
     </a>
   </div>
 </div>

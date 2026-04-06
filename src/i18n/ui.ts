@@ -63,7 +63,7 @@ export const ui = {
     "Home.Metrics.Point4.Desc": "PARENT SATISFACTION",
     "Home.Programs.Title": "Our Programs",
     "Home.Programs.Description":
-      "Explore the various programs we offer at Sakura Preschool.",
+      "Explore the various educational programs we offer at Sakura Preschool.",
     "Home.Programs.Program1.Title": "Explorers",
     "Home.Programs.Program1.Tag": "PLAYGROUP",
     "Home.Programs.Program1.Subtitle": "2-3 years",
@@ -79,6 +79,11 @@ export const ui = {
     "Home.Programs.Program3.Subtitle": "4+ years",
     "Home.Programs.Program3.Description":
       "A hands-on program encouraging creativity, critical thinking, and problem-solving skills",
+    "Home.Programs.Program4.Title": "Bloomers",
+    "Home.Programs.Program4.Tag": "DAYCARE",
+    "Home.Programs.Program4.Subtitle": "1.5+ years",
+    "Home.Programs.Program4.Description":
+      "Professional daycare program with a focus on safety, hygiene, and engaging activities",
     "Home.ProgramItem.LearnMore": "Learn More",
     "Home.Why.Title": "Why Choose Sakura?",
     "Home.Why.Description":
@@ -107,8 +112,8 @@ export const ui = {
     "Home.Marketing.Title": "Ready to watch your child bloom?",
     "Home.Marketing.Desc":
       "Limited slots available for current enrollment year. Schedule a visit to Sakura Preschool today.",
-    "Home.Marketing.PrimaryCTA": "Enquire Now",
-    "Home.Marketing.SecondaryCTA": "Call us Today",
+    "Home.Marketing.PrimaryCTA": "Enroll Today",
+    "Home.Marketing.SecondaryCTA": "Call us Now",
     //Admission Page
     "Admission.Hero.MarketingCard.Tagline": "LIMITED TIME OFFER",
     "Admission.Hero.MarketingCard.Title": "Open House Month!",
@@ -203,10 +208,10 @@ export const ui = {
       "Our playway approach integrates these seven fundamental domains into daily adventures, ensuring a holistic development of your child's potential.",
     "Curriculum.7Skills.Skill1.Title": "Language",
     "Curriculum.7Skills.Skill1.Subtitle":
-      "Enhancing vocabulary and self-expression through storytelling, puppetry, and phonics fun.",
+      "Enhancing vocabulary and self-expression through storytelling, games, and phonics fun.",
     "Curriculum.7Skills.Skill2.Title": "Physical",
     "Curriculum.7Skills.Skill2.Subtitle":
-      "Gross and fine motor skill development through indoor gym play and creative sand art.",
+      "Gross and fine motor skill development through indoor and outdoor gym play.",
     "Curriculum.7Skills.Skill3.Title": "Emotional",
     "Curriculum.7Skills.Skill3.Subtitle":
       "Building resilience, empathy, and social confidence through group activities and mindful play.",
@@ -231,14 +236,67 @@ export const ui = {
     "Curriculum.Milestones.Title": "Milestones of Growth",
     "Curriculum.Milestones.Description":
       "A roadmap for your child's developmental journey through thematic exploration.",
+    "Curriculum.Daycare.Tag": "Extended Support",
     "Curriculum.Daycare.Title": "Sakura Daycare: A Home Away from Home",
     "Curriculum.Daycare.Description":
       "Extending our philosophy beyond school hours, our daycare provides a safe, hygienic, and stimulating environment for children until 5:00 PM.",
+    "Curriculum.Daycare.Item1": "Safe and Hygienic Environment",
+    "Curriculum.Daycare.Item2": "Engaging Activities and Playtime",
+    "Curriculum.Daycare.Item3": "Qualified and Caring Staff",
+    "Curriculum.Daycare.Item4": "Flexible Scheduling Options",
+    "Curriculum.Daycare.CTA": "Enquire about Daycare",
     "Curriculum.Marketing.Title": "Start Your Child's Learning Journey",
     "Curriculum.Marketing.Description":
       "Limited seats available for the upcoming academic session. Book a personalized school tour today and see how your child can bloom.",
     "Curriculum.Marketing.Primary": "Enroll Now",
     "Curriculum.Marketing.Secondary": "Talk to an Expert",
+    //About Page
+    "About.Hero.Tagline": "FROM LIFELONG LEARNERS",
+    "About.Hero.Title": "Our Story: Nurturing Minds of",
+    "About.Hero.Title.Inner": "Tomorrow",
+    "About.Hero.Subtitle":
+      "Sakura Preschool was born out of a shared vision to create a nurturing, inclusive, and joyful learning environment for underserved towns in Northeast India.",
+    "About.Founders.Title": "The Hearts Behind Sakura",
+    "About.Founders.Description":
+      "Meet the visionaries dedicated to shaping your child's innate potential through empathy and joy.",
+    "About.Founders.founder1.Title": "Fung Rojee Basumatary",
+    "About.Founders.founder1.Subtitle": "Founder & School Principal",
+    "About.Founders.founder1.Description":
+      "From a family of educators, Fung had always wanted to do something for the people of her native region and Sakura Preschool is her way of giving back to her community.",
+    "About.Founders.founder1.Phone": "tel:8447695298",
+    "About.Founders.founder1.LinkedIn":
+      "https://www.linkedin.com/in/fung-rojee/",
+    "About.Founders.founder1.Email": "mailto:rojeefung@gmail.com",
+    "About.Founders.founder1.Education1": "IIM Bangalore",
+    "About.Founders.founder1.Education2": "IIT Bombay",
+    "About.Founders.founder2.Title": "Nitin Gautam",
+    "About.Founders.founder2.Subtitle": "Co-Founder & School Administrator",
+    "About.Founders.founder2.Description":
+      "With a passion for education, Nitin has a friendly and insipiring nature that makes Sakura Preschool an even more adventurous learning place for kids.",
+    "About.Founders.founder2.Phone": "tel:9840774089",
+    "About.Founders.founder2.LinkedIn":
+      "https://www.linkedin.com/in/nitingautam91/",
+    "About.Founders.founder2.Email": "mailto:p17nitinkg@iima.ac.in",
+    "About.Founders.founder2.Education1": "IIM Ahmedabad",
+    "About.Founders.founder2.Education2": "IIT Roorkee",
+    "About.Vision.Main.Title": "Our Vision",
+    "About.Vision.Main.Subtitle":
+      "To become a beacon for holistic childhood development, where every graduate leaves with a curious mind, a compassionate heart, and the confidence to color their own world.",
+    "About.Vision.Organic": "100% Organic playway based learning philosophy",
+    "About.Vision.Vision1.Title": "Empathy First",
+    "About.Vision.Vision1.Subtitle":
+      "We teach children to understand and share the feelings of others, building a kinder future.",
+    "About.Vision.Vision2.Title": "Creative Freedom",
+    "About.Vision.Vision2.Subtitle":
+      "Mistakes are celebrated as stepping stones to discovery and artistic expression.",
+    "About.Vision.Vision3.Title": "Intellectual Courage",
+    "About.Vision.Vision3.Subtitle":
+      "Encouraging children to ask 'Why?' and 'How?' until they find their own answers.",
+    "About.Marketing.Title": "Ready to let your child blossom?",
+    "About.Marketing.Subtitle":
+      "We invite you to tour our school and meet our community. Every journey starts with a single seed of curiosity.",
+    "About.Marketing.Primary": "Join our Family",
+    "About.Marketing.Secondary": "Book a School Visit",
   },
   //Assamese
   as: {},

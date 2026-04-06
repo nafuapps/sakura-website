@@ -1,7 +1,18 @@
 ---
+import AboutHeroSection from "@components/AboutPage/AboutHero/AboutHeroSection.astro"
+import AboutMarketingSection from "@components/AboutPage/AboutMarketing/AboutMarketingSection.astro"
 import Layout from "../layouts/Layout.astro"
+import FoundersSection from "@components/AboutPage/Founders/FoundersSection.astro"
+import VisionSection from "@components/AboutPage/Vision/VisionSection.astro"
 ---
 
-<Layout title="Sakura Preschool - About Us" description="" currentTab="about">
-  <div></div>
+<Layout
+  title="Sakura Preschool - About Us"
+  description="About page for Sakura Preschool in Kokrajhar - the best preschool in Northeast India"
+  currentTab="about"
+>
+  <AboutHeroSection />
+  <FoundersSection />
+  <VisionSection />
+  <AboutMarketingSection />
 </Layout>
