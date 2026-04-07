@@ -57,6 +57,17 @@ export type bgColor300 =
   | "bg-lime-300"
   | "bg-slate-300"
 
+export type bgColor800 =
+  | "bg-cyan-800"
+  | "bg-yellow-800"
+  | "bg-pink-800"
+  | "bg-lime-800"
+  | "bg-slate-800"
+  | "bg-indigo-800"
+  | "bg-purple-800"
+  | "bg-orange-800"
+  | "bg-red-800"
+
 export type bgLineColor = "bg-slate-200"
 
 export type sevenTextColor =
@@ -67,6 +78,15 @@ export type sevenTextColor =
   | "text-indigo-800"
   | "text-purple-800"
   | "text-orange-800"
+
+export type sevenBorderColor =
+  | "border-cyan-800"
+  | "border-yellow-800"
+  | "border-red-800"
+  | "border-lime-800"
+  | "border-indigo-800"
+  | "border-purple-800"
+  | "border-orange-800"
 
 export type sevenBgColor =
   | "bg-cyan-200"

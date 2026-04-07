@@ -46,10 +46,10 @@ export const ui = {
     "Home.Mission.Description": `"To provide affordable, high-quality early childhood care and education in smaller towns of Northeast India"`,
     "Home.Mission.Subtitle":
       "We strive to be a trusted partner to parents, offering a safe, inclusive space where every child learns, grows with peers, and develops into a confident, caring, and empathetic individual.",
-    "Home.Mission.Point1.Title": "Experienced Educators",
-    "Home.Mission.Point2.Title": "Play-Based Learning",
-    "Home.Mission.Point3.Title": "Local Culture Inclusive",
-    "Home.Mission.Point4.Title": "Community Engagement",
+    "Home.Mission.Point1.Title": "Researched and curated learning philosophy",
+    "Home.Mission.Point2.Title": "Inspired from WHO and UNICEF guidelines",
+    "Home.Mission.Point3.Title": "Aligned with India's ECCE framework",
+    "Home.Mission.Point4.Title": "Focussed on local community engagement",
     "Home.Metrics.Title": "Success Factors",
     "Home.Metrics.Description":
       "Numbers that define our commitment to excellence in early childhood education",
@@ -230,9 +230,41 @@ export const ui = {
     "Curriculum.7Skills.Goal.Title": "Our Goal",
     "Curriculum.7Skills.Goal.Subtitle":
       "Building a strong foundation for a lifetime of excellence and wonder.",
-    "Curriculum.Schedule.Title": "A Day at Sakura",
+    "Curriculum.Schedule.Title": "Daily Flow at Sakura",
     "Curriculum.Schedule.Description":
-      "Our thoughtfully designed daily schedule balances structured learning with free play, to create a consistent routine",
+      "Our thoughtfully designed schedule balances structured learning with free play, to create a consistent routine",
+    "Curriculum.Schedule.Item1.Time": "09.15 AM",
+    "Curriculum.Schedule.Item1.Title": "Kids Arrival & Soft Start",
+    "Curriculum.Schedule.Item1.Subtitle":
+      "Warm welcome and self-selected exploration of activity areas",
+    "Curriculum.Schedule.Item2.Time": "09.30 AM",
+    "Curriculum.Schedule.Item2.Title": "School starts.. Circle Time",
+    "Curriculum.Schedule.Item2.Subtitle":
+      "Songs, greeting rituals, and setting the daily intentions together",
+    "Curriculum.Schedule.Item3.Time": "09.45 AM",
+    "Curriculum.Schedule.Item3.Title": "Session 1: Cognitive & Math ",
+    "Curriculum.Schedule.Item3.Subtitle":
+      "Guided literacy or numeracy modules using play-based tool",
+    "Curriculum.Schedule.Item4.Time": "10.15 AM",
+    "Curriculum.Schedule.Item4.Title": "Session 2: Outdoor play",
+    "Curriculum.Schedule.Item4.Subtitle":
+      "Supervised nature discovery in the outdoor play area with gross motor stimulation",
+    "Curriculum.Schedule.Item5.Time": "10.45 AM",
+    "Curriculum.Schedule.Item5.Title": "Snack Time",
+    "Curriculum.Schedule.Item5.Subtitle":
+      "Healthy eating habits intermixed with social mingling and laughter",
+    "Curriculum.Schedule.Item6.Time": "11.00 AM",
+    "Curriculum.Schedule.Item6.Title": "Clean up & Free Play",
+    "Curriculum.Schedule.Item6.Subtitle":
+      "Coordinated cleaning of eating area followed with washing ritual and physical fun",
+    "Curriculum.Schedule.Item7.Time": "11.15 AM",
+    "Curriculum.Schedule.Item7.Title": "Session 3: Language & Expression",
+    "Curriculum.Schedule.Item7.Subtitle":
+      "Focussed communication and creativity based module for social and emotional connection",
+    "Curriculum.Schedule.Item8.Time": "11.45 AM",
+    "Curriculum.Schedule.Item8.Title": "Goodbye song & Pack-up",
+    "Curriculum.Schedule.Item8.Subtitle":
+      "Learning the discipline of organizing our space and internalizing wins of the day",
     "Curriculum.Milestones.Title": "Milestones of Growth",
     "Curriculum.Milestones.Description":
       "A roadmap for your child's developmental journey through thematic exploration.",

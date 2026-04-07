@@ -4,6 +4,19 @@ import CurriculumSectionDescription from "../CurriculumSectionDescription.astro"
 import CurriculumSectionTitle from "../CurriculumSectionTitle.astro"
 import CurriculumSectionWrapper from "../CurriculumSectionWrapper.astro"
 import { useTranslations, getLangFromUrl } from "@i18n/utils"
+import ScheduleItem from "./ScheduleItem.astro"
+import ScheduleBar from "./ScheduleBar.astro"
+import {
+  Baby,
+  Bell,
+  BookCopy,
+  CircleCheckBig,
+  HeartHandshake,
+  MessagesSquare,
+  TreePine,
+  Utensils,
+} from "@lucide/astro"
+import ScheduleRowContainer from "./ScheduleRowContainer.astro"
 const t = useTranslations(getLangFromUrl(Astro.url))
 ---
 
@@ -13,5 +26,95 @@ const t = useTranslations(getLangFromUrl(Astro.url))
     <CurriculumSectionDescription
       description={t("Curriculum.Schedule.Description")}
     />
+    <div class="flex flex-col w-full">
+      <ScheduleRowContainer side="left">
+        <ScheduleBar icon={Baby} bgVariant="bg-yellow-800" />
+        <ScheduleItem
+          side="left"
+          time={t("Curriculum.Schedule.Item1.Time")}
+          title={t("Curriculum.Schedule.Item1.Title")}
+          subtitle={t("Curriculum.Schedule.Item1.Subtitle")}
+          textColor="text-yellow-800"
+          borderColor="border-yellow-800"
+        />
+      </ScheduleRowContainer>
+      <ScheduleRowContainer side="right">
+        <ScheduleBar icon={Bell} bgVariant="bg-purple-800" />
+        <ScheduleItem
+          side="right"
+          time={t("Curriculum.Schedule.Item2.Time")}
+          title={t("Curriculum.Schedule.Item2.Title")}
+          subtitle={t("Curriculum.Schedule.Item2.Subtitle")}
+          textColor="text-purple-800"
+          borderColor="border-purple-800"
+        />
+      </ScheduleRowContainer>
+      <ScheduleRowContainer side="left">
+        <ScheduleBar icon={BookCopy} bgVariant="bg-cyan-800" />
+        <ScheduleItem
+          side="left"
+          time={t("Curriculum.Schedule.Item3.Time")}
+          title={t("Curriculum.Schedule.Item3.Title")}
+          subtitle={t("Curriculum.Schedule.Item3.Subtitle")}
+          textColor="text-cyan-800"
+          borderColor="border-cyan-800"
+        />
+      </ScheduleRowContainer>
+      <ScheduleRowContainer side="right">
+        <ScheduleBar icon={TreePine} bgVariant="bg-lime-800" />
+        <ScheduleItem
+          side="right"
+          time={t("Curriculum.Schedule.Item4.Time")}
+          title={t("Curriculum.Schedule.Item4.Title")}
+          subtitle={t("Curriculum.Schedule.Item4.Subtitle")}
+          textColor="text-lime-800"
+          borderColor="border-lime-800"
+        />
+      </ScheduleRowContainer>
+      <ScheduleRowContainer side="left">
+        <ScheduleBar icon={Utensils} bgVariant="bg-indigo-800" />
+        <ScheduleItem
+          side="left"
+          time={t("Curriculum.Schedule.Item5.Time")}
+          title={t("Curriculum.Schedule.Item5.Title")}
+          subtitle={t("Curriculum.Schedule.Item5.Subtitle")}
+          textColor="text-indigo-800"
+          borderColor="border-indigo-800"
+        />
+      </ScheduleRowContainer>
+      <ScheduleRowContainer side="right">
+        <ScheduleBar icon={CircleCheckBig} bgVariant="bg-orange-800" />
+        <ScheduleItem
+          side="right"
+          time={t("Curriculum.Schedule.Item6.Time")}
+          title={t("Curriculum.Schedule.Item6.Title")}
+          subtitle={t("Curriculum.Schedule.Item6.Subtitle")}
+          textColor="text-orange-800"
+          borderColor="border-orange-800"
+        />
+      </ScheduleRowContainer>
+      <ScheduleRowContainer side="left">
+        <ScheduleBar icon={MessagesSquare} bgVariant="bg-cyan-800" />
+        <ScheduleItem
+          side="left"
+          time={t("Curriculum.Schedule.Item7.Time")}
+          title={t("Curriculum.Schedule.Item7.Title")}
+          subtitle={t("Curriculum.Schedule.Item7.Subtitle")}
+          textColor="text-cyan-800"
+          borderColor="border-cyan-800"
+        />
+      </ScheduleRowContainer>
+      <ScheduleRowContainer side="right">
+        <ScheduleBar icon={HeartHandshake} bgVariant="bg-red-800" />
+        <ScheduleItem
+          side="right"
+          time={t("Curriculum.Schedule.Item8.Time")}
+          title={t("Curriculum.Schedule.Item8.Title")}
+          subtitle={t("Curriculum.Schedule.Item8.Subtitle")}
+          textColor="text-red-800"
+          borderColor="border-red-800"
+        />
+      </ScheduleRowContainer>
+    </div>
   </CurriculumContentWrapper>
 </CurriculumSectionWrapper>
