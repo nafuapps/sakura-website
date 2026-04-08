@@ -268,6 +268,115 @@ export const ui = {
     "Curriculum.Milestones.Title": "Milestones of Growth",
     "Curriculum.Milestones.Description":
       "A roadmap for your child's developmental journey through thematic exploration.",
+    "Curriculum.Milestones.Playgroup.Title": "Playgroup: Explorers",
+    "Curriculum.Milestones.Playgroup.Subtitle": "2-3 YEARS",
+    "Curriculum.Milestones.Playgroup.Description":
+      "Focus on sensory exploration and secure attachment in a serene, home-like environment.",
+    "Curriculum.Milestones.Nursery.Title": "Nursery: Discoverers",
+    "Curriculum.Milestones.Nursery.Subtitle": "3-4 YEARS",
+    "Curriculum.Milestones.Nursery.Description":
+      "Developing independence through social interaction, language acquisition, and messy art.",
+    "Curriculum.Milestones.Kindergarten.Title": "Kindergarten: Creators",
+    "Curriculum.Milestones.Kindergarten.Subtitle": "4+ YEARS",
+    "Curriculum.Milestones.Kindergarten.Description":
+      "Preparation for the next step with literacy, numeracy, and complex project-based learning.",
+    "Curriculum.Milestones.Quarter1.Title": "APR - JUN",
+    "Curriculum.Milestones.Quarter2.Title": "JUL - SEP",
+    "Curriculum.Milestones.Quarter3.Title": "OCT - DEC",
+    "Curriculum.Milestones.Quarter4.Title": "JAN - MAR",
+    "Curriculum.Milestones.Playgroup.Quarter1.Subtitle":
+      "Building secure attachments and sensory awareness",
+    "Curriculum.Milestones.Playgroup.Quarter2.Subtitle":
+      "Developing basic motor skills and social smiles",
+    "Curriculum.Milestones.Playgroup.Quarter3.Subtitle":
+      "Exploring language through songs and stories",
+    "Curriculum.Milestones.Playgroup.Quarter4.Subtitle":
+      "Fostering independence in daily routines",
+    "Curriculum.Milestones.Nursery.Quarter1.Subtitle":
+      "Introduction to letters, numbers, and colors",
+    "Curriculum.Milestones.Nursery.Quarter2.Subtitle":
+      "Enhancing social skills and group play",
+    "Curriculum.Milestones.Nursery.Quarter3.Subtitle":
+      "Creative expression through art and music",
+    "Curriculum.Milestones.Nursery.Quarter4.Subtitle":
+      "Building confidence for kindergarten",
+    "Curriculum.Milestones.Kindergarten.Quarter1.Subtitle":
+      "Mastering phonics and early reading",
+    "Curriculum.Milestones.Kindergarten.Quarter2.Subtitle":
+      "Exploring numbers and basic math concepts",
+    "Curriculum.Milestones.Kindergarten.Quarter3.Subtitle":
+      "Understanding the world through science and nature",
+    "Curriculum.Milestones.Kindergarten.Quarter4.Subtitle":
+      "Developing leadership and project skills",
+    "Curriculum.Milestones.Playgroup.Quarter1.Item1":
+      "Structured parallel play stations",
+    "Curriculum.Milestones.Playgroup.Quarter1.Item2": "Action based story play",
+    "Curriculum.Milestones.Playgroup.Quarter1.Item3": "Balance line play",
+    "Curriculum.Milestones.Playgroup.Quarter1.Item4":
+      "Instruction games like treasure hunt",
+    "Curriculum.Milestones.Playgroup.Quarter2.Item1":
+      "Block building challenges",
+    "Curriculum.Milestones.Playgroup.Quarter2.Item2":
+      "Question cards and puzzle corner",
+    "Curriculum.Milestones.Playgroup.Quarter2.Item3": "Outdoor play",
+    "Curriculum.Milestones.Playgroup.Quarter2.Item4":
+      "Tracing boards with shapes",
+    "Curriculum.Milestones.Playgroup.Quarter3.Item1": "Crayon art stations",
+    "Curriculum.Milestones.Playgroup.Quarter3.Item2": "Story play in a circle",
+    "Curriculum.Milestones.Playgroup.Quarter3.Item3": "Peer sharing games",
+    "Curriculum.Milestones.Playgroup.Quarter3.Item4":
+      "Obstacle course with pedals",
+    "Curriculum.Milestones.Playgroup.Quarter4.Item1": "Daily routine charts",
+    "Curriculum.Milestones.Playgroup.Quarter4.Item2":
+      "Sequence play with story cards",
+    "Curriculum.Milestones.Playgroup.Quarter4.Item3": "Group building projects",
+    "Curriculum.Milestones.Playgroup.Quarter4.Item4":
+      "Supervised cutting activities",
+    "Curriculum.Milestones.Nursery.Quarter1.Item1": "Routine play",
+    "Curriculum.Milestones.Nursery.Quarter1.Item2": "Action imitation games",
+    "Curriculum.Milestones.Nursery.Quarter1.Item3": "Sorting games",
+    "Curriculum.Milestones.Nursery.Quarter1.Item4":
+      "Treasure hunt with positional clues",
+    "Curriculum.Milestones.Nursery.Quarter2.Item1": "Collaborative art",
+    "Curriculum.Milestones.Nursery.Quarter2.Item2": "Counting songs",
+    "Curriculum.Milestones.Nursery.Quarter2.Item3": "Outdoor play",
+    "Curriculum.Milestones.Nursery.Quarter2.Item4": "Help-a-friend games",
+    "Curriculum.Milestones.Nursery.Quarter3.Item1": "Build-a-bridge challenge",
+    "Curriculum.Milestones.Nursery.Quarter3.Item2": "Object substituion play",
+    "Curriculum.Milestones.Nursery.Quarter3.Item3": "Classification play",
+    "Curriculum.Milestones.Nursery.Quarter3.Item4": "Peer negotiation games",
+    "Curriculum.Milestones.Nursery.Quarter4.Item1":
+      "Calendar play and pattern games",
+    "Curriculum.Milestones.Nursery.Quarter4.Item2": "Rule based games",
+    "Curriculum.Milestones.Nursery.Quarter4.Item3":
+      "Routine responsibility play",
+    "Curriculum.Milestones.Nursery.Quarter4.Item4": "Group problem solving",
+    "Curriculum.Milestones.Kindergarten.Quarter1.Item1":
+      "Storytelling and name circle",
+    "Curriculum.Milestones.Kindergarten.Quarter1.Item2":
+      "Action sequencing play",
+    "Curriculum.Milestones.Kindergarten.Quarter1.Item3": "Group agreements",
+    "Curriculum.Milestones.Kindergarten.Quarter1.Item4":
+      "Shape and number hunt games",
+    "Curriculum.Milestones.Kindergarten.Quarter2.Item1": "Tracing games",
+    "Curriculum.Milestones.Kindergarten.Quarter2.Item2": "Outdoor play",
+    "Curriculum.Milestones.Kindergarten.Quarter2.Item3":
+      "Quantity games and math stories",
+    "Curriculum.Milestones.Kindergarten.Quarter2.Item4":
+      "Emotion role discussion",
+    "Curriculum.Milestones.Kindergarten.Quarter3.Item1": "Sound bingo",
+    "Curriculum.Milestones.Kindergarten.Quarter3.Item2": "Task challenge play",
+    "Curriculum.Milestones.Kindergarten.Quarter3.Item3":
+      "Engineering challenges",
+    "Curriculum.Milestones.Kindergarten.Quarter3.Item4": "Shop games",
+    "Curriculum.Milestones.Kindergarten.Quarter4.Item1":
+      "Calendar play and puzzle corner",
+    "Curriculum.Milestones.Kindergarten.Quarter4.Item2":
+      "Routine leadership roles",
+    "Curriculum.Milestones.Kindergarten.Quarter4.Item3": "Shared writing play",
+    "Curriculum.Milestones.Kindergarten.Quarter4.Item4":
+      "Group presentation play",
+
     "Curriculum.Daycare.Tag": "Extended Support",
     "Curriculum.Daycare.Title": "Sakura Daycare: A Home Away from Home",
     "Curriculum.Daycare.Description":

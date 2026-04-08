@@ -96,3 +96,12 @@ export type sevenBgColor =
   | "bg-indigo-200"
   | "bg-purple-200"
   | "bg-orange-200"
+
+export type SkillType =
+  | "language"
+  | "physical"
+  | "nature"
+  | "social"
+  | "creative"
+  | "cognitive"
+  | "practical"

@@ -1,0 +1,35 @@
+---
+import { CalendarRange } from "@lucide/astro"
+import type { bgColor200, textColor800 } from "@utils/commonTypes"
+
+interface Props {
+  title: string
+  subtitle: string
+  bgColor: bgColor200
+  textColor: textColor800
+  index: number
+}
+const { title, subtitle, index, textColor } = Astro.props
+---
+
+<div
+  class={`border-2 border-slate-50 flex flex-col gap-2.5 md:gap-3 p-3 md:p-4 rounded-lg`}
+>
+  <div class="flex flex-row justify-between items-center gap-3">
+    <div
+      class={`bg-slate-50 rounded-lg px-2 py-1.5 gap-1.5 md:gap-2 flex items-center justify-center`}
+    >
+      <CalendarRange class={`${textColor} size-4 md:size-5 `} />
+      <p class={`${textColor} text-xs md:text-sm font-bold`}>{title}</p>
+    </div>
+    <div
+      class={`bg-slate-50 rounded-lg size-7 md:size-8 flex items-center justify-center`}
+    >
+      <p class={`${textColor} text-base md:text-lg font-black`}>{index}</p>
+    </div>
+  </div>
+  <p class="text-slate-600 text-xs md:text-sm">{subtitle}</p>
+  <div class="flex flex-wrap gap-2">
+    <slot />
+  </div>
+</div>

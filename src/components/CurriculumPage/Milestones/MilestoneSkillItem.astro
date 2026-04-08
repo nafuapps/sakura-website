@@ -1,0 +1,17 @@
+---
+import type { SkillType } from "@utils/commonTypes"
+import { getColors } from "@utils/commonUtils"
+
+interface Props {
+  title: string
+  skill: SkillType
+}
+const { title, skill } = Astro.props as Props
+const [bgColor, textColor] = getColors(skill)
+---
+
+<div
+  class={`flex flex-row items-center justify-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-1.5 rounded-lg ${bgColor}`}
+>
+  <p class={`text-tiny md:text-xs ${textColor}`}>{title}</p>
+</div>
