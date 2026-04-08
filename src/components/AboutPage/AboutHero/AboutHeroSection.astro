@@ -30,12 +30,16 @@ const t = useTranslations(getLangFromUrl(Astro.url))
     </div>
     <div
       id="hero-right"
-      class="flex flex-col gap-4 md:gap-6 w-full md:w-1/2 items-center md:items-end"
+      class="flex flex-col relative gap-4 md:gap-6 w-full md:w-1/2 items-center md:items-end"
     >
+      <div
+        class="h-72 w-11/12 rotate-2 md:h-96 bg-yellow-100/80 rounded-2xl aspect-square"
+      >
+      </div>
       <Image
         src={AboutCoverImage}
         alt="Sakura Preschool Kokrajhar Hero Image"
-        class="rounded-2xl h-72 w-full md:h-96 object-cover -rotate-2 shadow-2xl"
+        class="rounded-2xl absolute h-72 w-9/10 md:h-96 object-cover -rotate-2 shadow-2xl"
       />
     </div>
   </AboutContentWrapper>

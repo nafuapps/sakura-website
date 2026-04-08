@@ -44,17 +44,21 @@ const t = useTranslations(getLangFromUrl(Astro.url))
     </div>
     <div
       id="hero-right"
-      class="flex flex-col gap-4 md:gap-6 w-full md:w-1/2 items-center md:items-end"
+      class="flex flex-col gap-4 md:gap-6 relative w-full md:w-1/2 items-center md:items-end"
     >
+      <div
+        class="h-72 w-11/12 rotate-6 md:h-96 bg-pink-100/80 rounded-2xl aspect-square"
+      >
+      </div>
       <Image
         src={heroIcon2}
         alt="Hero Icon"
-        class="hidden md:flex size-12 opacity-20 relative right-16 -top-20"
+        class="hidden md:flex size-12 absolute opacity-20 right-16 -top-20"
       />
       <Image
         src={homeCoverImage}
         alt="Sakura Preschool Kokrajhar Hero Image"
-        class="rounded-lg h-72 w-full md:h-96 object-cover rotate-2 shadow-2xl"
+        class="rounded-lg h-72 absolute w-9/10 md:h-96 object-cover rotate-2 shadow-2xl"
       />
     </div>
   </HomeContentWrapper>
